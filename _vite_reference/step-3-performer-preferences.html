@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/>
+<title>Step 3: Performer Preferences &amp; Budget – GoPratle</title>
+<meta name="description" content="Set your performer budget, venue environment, language preferences and special requests on GoPratle."/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "primary-container": "#ff5a1f",
+          "inverse-on-surface": "#2f3035",
+          "error": "#ffb4ab",
+          "secondary-fixed-dim": "#c2c6d8",
+          "surface-container-highest": "#333539",
+          "surface": "#111317",
+          "on-tertiary-container": "#501900",
+          "background": "#111317",
+          "tertiary-container": "#e07444",
+          "inverse-surface": "#e2e2e8",
+          "on-primary-container": "#541400",
+          "outline-variant": "#5b4038",
+          "primary-fixed-dim": "#ffb59e",
+          "tertiary-fixed": "#ffdbcd",
+          "on-background": "#e2e2e8",
+          "primary": "#ffb59e",
+          "on-error-container": "#ffdad6",
+          "inverse-primary": "#ae3200",
+          "on-surface": "#e2e2e8",
+          "on-secondary-fixed": "#161b28",
+          "tertiary": "#ffb598",
+          "on-tertiary-fixed": "#360f00",
+          "surface-tint": "#ffb59e",
+          "on-secondary": "#2b303e",
+          "primary-fixed": "#ffdbd0",
+          "surface-bright": "#37393e",
+          "surface-container-high": "#282a2e",
+          "secondary-container": "#424655",
+          "on-primary": "#5e1700",
+          "on-surface-variant": "#e4beb3",
+          "surface-dim": "#111317",
+          "on-tertiary-fixed-variant": "#7e2c00",
+          "surface-container": "#1e2024",
+          "on-primary-fixed": "#3a0b00",
+          "surface-container-low": "#1a1c20",
+          "on-tertiary": "#591d00",
+          "outline": "#ab897f",
+          "tertiary-fixed-dim": "#ffb598",
+          "surface-container-lowest": "#0c0e12",
+          "on-secondary-container": "#b0b5c6",
+          "on-secondary-fixed-variant": "#424655",
+          "surface-variant": "#333539",
+          "secondary-fixed": "#dee2f4",
+          "on-error": "#690005",
+          "on-primary-fixed-variant": "#852400",
+          "secondary": "#c2c6d8",
+          "error-container": "#93000a"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-2xl": "4rem",
+          "space-3xl": "6rem",
+          "margin-md": "3rem",
+          "margin": "1.5rem",
+          "space-xl": "2.5rem",
+          "gutter-sm": "1rem",
+          "margin-lg": "5rem",
+          "space-md": "1rem",
+          "gutter-lg": "2rem",
+          "gutter": "1.5rem",
+          "space-sm": "0.5rem",
+          "space-xs": "0.25rem",
+          "space-lg": "1.5rem"
+        },
+        "fontFamily": {
+          "headline-xl": ["Plus Jakarta Sans"],
+          "label-sm": ["Plus Jakarta Sans"],
+          "headline-md": ["Plus Jakarta Sans"],
+          "display-hero-mobile": ["Plus Jakarta Sans"],
+          "display-hero": ["Plus Jakarta Sans"],
+          "label-md": ["Plus Jakarta Sans"],
+          "headline-sm": ["Plus Jakarta Sans"],
+          "badge-micro": ["Plus Jakarta Sans"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "body-lg": ["Plus Jakarta Sans"],
+          "headline-xl-mobile": ["Plus Jakarta Sans"],
+          "headline-lg": ["Plus Jakarta Sans"],
+          "body-md": ["Plus Jakarta Sans"]
+        },
+        "fontSize": {
+          "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "700"}],
+          "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+          "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+          "display-hero-mobile": ["38px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+          "display-hero": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+          "label-md": ["14px", {"lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+          "headline-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "badge-micro": ["11px", {"lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700"}],
+          "body-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}],
+          "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400"}],
+          "headline-xl-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+          "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+          "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}]
+        }
+      },
+    },
+  };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-surface">
+
+<!-- HEADER -->
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/70 backdrop-blur-xl border-b border-white/[0.08]">
+  <div class="h-20 max-w-[1280px] mx-auto px-margin md:px-margin-md lg:px-margin-lg flex items-center justify-between">
+    <div class="flex items-center gap-space-sm">
+      <img alt="GoPratle Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xjvc9315TLRwPfxhYRyN-phA82HhGheNGKEykP4RkY-D8g13qg3rr4PGS2yIHlPR4JhqKQlONMi3vz-z_dSCMZAc9giDq5WGZnySswFNIOQjmlrdVhtb-ZLa5wUYpio3CL5ICq127fiBmP_lPqMQ6h_tuCB832OycGyPlSaVEykYeT1LyO4FjE3uTYXQD9sG2xvlyqOschrPxxn8R_D0Rv9f3EQcLIy2Gi6WR1obB_9h8bPrQkHiMgfQ"/>
+      <a class="flex items-center gap-1 font-headline-md text-headline-md tracking-tight font-extrabold text-on-surface" href="index.html"><span>GoPratle</span><span class="h-2 w-2 rounded-full bg-primary-container inline-block translate-y-0.5"></span></a>
+    </div>
+    <nav class="hidden md:flex items-center gap-gutter">
+      <a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="index.html#how-it-works">How it works</a>
+      <a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="index.html#categories">For Planners</a>
+      <a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="index.html#categories">Categories</a>
+    </nav>
+    <div class="flex items-center gap-space-md">
+      <a class="hidden sm:inline-flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors px-space-sm py-space-xs" href="javascript:void(0)" id="hdr-signin">Sign In</a>
+      <a class="inline-flex items-center justify-center bg-primary-container hover:bg-[#ff723f] text-on-surface font-label-md text-label-md px-space-lg py-space-sm rounded-full shadow-[0_8px_24px_-4px_rgba(255,90,31,0.4)] transition-all transform hover:-translate-y-0.5" href="step-1-event-basics.html">Post a Requirement</a>
+      <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="w-full pt-20 bg-surface">
+<div class="flex flex-col w-full">
+
+<!-- Atmospheric Ambient Glows -->
+<div class="relative w-full overflow-hidden">
+  <div class="pointer-events-none absolute -top-40 right-1/4 w-[500px] h-[500px] rounded-full bg-primary-container/10 blur-[130px]"></div>
+  <div class="pointer-events-none absolute top-96 -left-32 w-[420px] h-[420px] rounded-full bg-primary/5 blur-[120px]"></div>
+
+  <!-- Main Multi-Step Content Area -->
+  <div class="max-w-[1280px] w-full mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-xl">
+
+    <!-- Stepper Header Section -->
+    <div class="flex flex-col gap-space-lg mb-space-2xl">
+      <!-- Utility Top Row -->
+      <div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm border-b border-white/[0.06]">
+        <a class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary hover:text-on-surface transition-colors group" href="step-2-performer-details.html" id="back-to-step2">
+          <span class="material-symbols-outlined text-[18px] group-hover:-translate-x-0.5 transition-transform">arrow_back</span>
+          <span>Back to Step 2</span>
+        </a>
+        <div class="flex items-center gap-space-lg">
+          <div class="flex items-center gap-2 font-label-sm text-label-sm text-secondary">
+            <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>Draft auto-saved</span>
+          </div>
+          <button class="font-label-md text-label-md text-secondary hover:text-on-surface transition-colors hover:underline" id="save-exit-btn" type="button">Save &amp; Exit</button>
+        </div>
+      </div>
+
+      <!-- 4-Step Horizontal Stepper Progression Bar -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter-sm md:gap-gutter">
+        <!-- Step 1: Basics (Completed) -->
+        <a href="step-1-event-basics.html" class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-low/70 backdrop-blur-md hover:bg-surface-container transition-colors">
+          <div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 text-primary">
+            <span class="material-symbols-outlined text-[18px]">check</span>
+          </div>
+          <div class="flex flex-col min-w-0">
+            <span class="font-badge-micro text-badge-micro uppercase tracking-wider text-secondary">Step 1</span>
+            <span class="font-label-md text-label-md text-on-surface truncate">Basics</span>
+          </div>
+        </a>
+        <!-- Step 2: Performer Details (Completed) -->
+        <a href="step-2-performer-details.html" class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-low/70 backdrop-blur-md hover:bg-surface-container transition-colors">
+          <div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 text-primary">
+            <span class="material-symbols-outlined text-[18px]">check</span>
+          </div>
+          <div class="flex flex-col min-w-0">
+            <span class="font-badge-micro text-badge-micro uppercase tracking-wider text-secondary">Step 2</span>
+            <span class="font-label-md text-label-md text-on-surface truncate">Performer Details</span>
+          </div>
+        </a>
+        <!-- Step 3: Preferences & Budget (ACTIVE) -->
+        <div class="relative flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-high border border-primary-container/40 shadow-[0_4px_24px_-4px_rgba(255,90,31,0.25)]">
+          <div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center shrink-0 text-on-surface shadow-[0_0_12px_rgba(255,90,31,0.6)]">
+            <span class="font-label-sm text-label-sm font-bold">3</span>
+          </div>
+          <div class="flex flex-col min-w-0">
+            <div class="flex items-center gap-1.5">
+              <span class="font-badge-micro text-badge-micro uppercase tracking-wider text-primary font-bold">Step 3</span>
+              <span class="px-1.5 py-0.5 rounded-full bg-primary-container/20 text-primary font-badge-micro text-[9px] uppercase tracking-wider font-extrabold">In Progress</span>
+            </div>
+            <span class="font-label-md text-label-md text-on-surface font-semibold truncate">Preferences &amp; Budget</span>
+          </div>
+        </div>
+        <!-- Step 4: Review (Upcoming) -->
+        <div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-lowest/40 opacity-50">
+          <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center shrink-0 text-secondary">
+            <span class="font-label-sm text-label-sm">4</span>
+          </div>
+          <div class="flex flex-col min-w-0">
+            <span class="font-badge-micro text-badge-micro uppercase tracking-wider text-secondary">Step 4</span>
+            <span class="font-label-md text-label-md text-secondary truncate">Review &amp; Post</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section Title -->
+      <div class="flex flex-col gap-space-xs mt-space-sm">
+        <div class="inline-flex items-center gap-2 self-start px-space-sm py-1 rounded-full bg-primary-container/15 text-primary-container font-label-sm text-label-sm uppercase tracking-widest font-bold">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+          STEP 3 OF 4 • BUDGET &amp; LOGISTICS
+        </div>
+        <h1 class="font-headline-xl text-headline-xl font-extrabold text-on-surface tracking-tight">Preferences &amp; Budget</h1>
+        <p class="font-body-md text-body-md text-secondary max-w-3xl">Specify your financial parameters, stage environment, and performance language to help artists tailor their pitch with transparent, all-inclusive terms.</p>
+      </div>
+    </div>
+
+    <!-- Core Content Grid: Form (Left 7 Cols) + Dynamic Sticky Summary (Right 5 Cols) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-start">
+
+      <!-- Left: Form Controls Container -->
+      <div class="lg:col-span-7 flex flex-col gap-space-xl">
+
+        <!-- 1. Performer Budget Range Card -->
+        <div class="flex flex-col gap-space-lg p-space-lg md:p-space-xl rounded-2xl bg-surface-container-low/90 backdrop-blur-xl shadow-xl">
+          <div class="flex items-start justify-between gap-space-md">
+            <div class="flex flex-col gap-1">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[22px]">payments</span>
+                <label class="font-headline-sm text-headline-sm font-bold text-on-surface" for="budget-slider">Expected Artist Fee / Budget Range</label>
+              </div>
+              <p class="font-body-sm text-body-sm text-secondary">Set the aggregate fee allocated for the artist or ensemble (in INR ₹).</p>
+            </div>
+            <span class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">INR (₹)</span>
+          </div>
+          <!-- Prominent Visualized Current Selection -->
+          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between p-space-md rounded-xl bg-surface-container-lowest/80 gap-space-xs">
+            <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Target Range</span>
+            <div class="flex items-baseline gap-2">
+              <span class="font-headline-lg text-headline-lg font-extrabold text-on-surface tracking-tight" id="display-budget-range">₹60,000 – ₹1,50,000</span>
+              <span class="font-label-sm text-label-sm text-secondary">(Per Performance)</span>
+            </div>
+          </div>
+          <!-- Dual Range Track Slider UI -->
+          <div class="flex flex-col gap-space-sm pt-space-xs">
+            <div class="relative w-full h-2 rounded-full bg-surface-container-highest">
+              <div class="absolute left-[15%] right-[45%] h-full bg-primary-container rounded-full" id="budget-track"></div>
+              <div class="absolute left-[15%] top-1/2 -translate-y-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-on-surface shadow-[0_0_12px_rgba(255,90,31,0.5)] cursor-grab flex items-center justify-center" id="thumb-min">
+                <div class="w-2 h-2 rounded-full bg-primary-container"></div>
+              </div>
+              <div class="absolute right-[45%] top-1/2 -translate-y-1/2 translate-x-1/2 w-6 h-6 rounded-full bg-on-surface shadow-[0_0_12px_rgba(255,90,31,0.5)] cursor-grab flex items-center justify-center" id="thumb-max">
+                <div class="w-2 h-2 rounded-full bg-primary-container"></div>
+              </div>
+            </div>
+            <div class="flex justify-between font-label-sm text-label-sm text-secondary pt-1">
+              <span>Min: ₹15,000</span>
+              <span>Median: ₹1,20,000</span>
+              <span>Max: ₹5,00,000+</span>
+            </div>
+          </div>
+          <!-- Quick Preset Chips -->
+          <div class="flex flex-col gap-space-xs">
+            <span class="font-label-sm text-label-sm text-secondary">Quick Range Shortcuts</span>
+            <div class="flex flex-wrap gap-2">
+              <button class="preset-chip px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-container-high hover:bg-surface-container-highest text-secondary hover:text-on-surface transition-colors" data-min="15000" data-max="50000" data-label="₹30,000 – ₹50,000" type="button">₹30k – ₹50k</button>
+              <button class="preset-chip active-chip px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-primary-container text-on-surface font-bold shadow-[0_4px_12px_-2px_rgba(255,90,31,0.4)]" data-min="60000" data-max="150000" data-label="₹60,000 – ₹1,50,000" type="button">₹50k – ₹1.5L</button>
+              <button class="preset-chip px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-container-high hover:bg-surface-container-highest text-secondary hover:text-on-surface transition-colors" data-min="150000" data-max="250000" data-label="₹1,50,000 – ₹2,50,000" type="button">₹1.5L – ₹2.5L</button>
+              <button class="preset-chip px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-container-high hover:bg-surface-container-highest text-secondary hover:text-on-surface transition-colors" data-min="250000" data-max="500000" data-label="₹2,50,000 – ₹5,00,000+" type="button">₹2.5L+</button>
+            </div>
+          </div>
+          <!-- Market Benchmark -->
+          <div class="flex items-start gap-space-sm p-space-md rounded-xl bg-surface-container-high/60">
+            <span class="material-symbols-outlined text-primary-container text-[20px] shrink-0 mt-0.5">insights</span>
+            <div class="flex flex-col gap-0.5">
+              <span class="font-label-sm text-label-sm font-semibold text-on-surface">GoPratle Market Benchmark</span>
+              <p class="font-body-sm text-body-sm text-secondary leading-snug">Based on a 3-hour DJ Duo setup with commercial equipment in urban metro circuits, verified market quotes average between <strong class="text-on-surface font-semibold">₹75,000 – ₹1,20,000</strong>.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Sound and Lights Provision Toggle -->
+        <div class="flex flex-col gap-space-md p-space-lg md:p-space-xl rounded-2xl bg-surface-container-low/90 backdrop-blur-xl shadow-xl">
+          <div class="flex items-start justify-between gap-space-md">
+            <div class="flex flex-col gap-1">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[22px]">speaker_group</span>
+                <span class="font-headline-sm text-headline-sm font-bold text-on-surface">Sound and Lights Provided by Host</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-secondary">Specify if audio consoles, speakers, and stage lighting are present on site.</p>
+            </div>
+            <label class="relative inline-flex items-center cursor-pointer shrink-0">
+              <input checked class="sr-only peer" id="av-toggle" type="checkbox"/>
+              <div class="w-14 h-8 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-on-surface after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary-container shadow-inner"></div>
+            </label>
+          </div>
+          <!-- Dynamic State Description -->
+          <div class="flex flex-col gap-space-xs p-space-md rounded-xl bg-surface-container-lowest/80" id="av-state-box">
+            <div class="flex items-center gap-2">
+              <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-badge-micro text-badge-micro uppercase tracking-wider font-bold">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                Host Supplies AV
+              </span>
+              <span class="font-label-sm text-label-sm text-on-surface font-semibold">Plug &amp; Play Setup</span>
+            </div>
+            <p class="font-body-sm text-body-sm text-secondary leading-relaxed">Venue or host provides a calibrated PA system, subwoofers, wireless handheld mics, and an intelligent stage light rig. Performer only brings personal instrument / DJ controller.</p>
+          </div>
+        </div>
+
+        <!-- 3. Venue Type Selector -->
+        <div class="flex flex-col gap-space-md p-space-lg md:p-space-xl rounded-2xl bg-surface-container-low/90 backdrop-blur-xl shadow-xl">
+          <div class="flex flex-col gap-1">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-[22px]">location_city</span>
+              <span class="font-headline-sm text-headline-sm font-bold text-on-surface">Venue Environment</span>
+            </div>
+            <p class="font-body-sm text-body-sm text-secondary">Environmental acoustics dictate performer gear calibration and decibel limits.</p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md" id="venue-selector-container">
+            <!-- Indoor Card (Active) -->
+            <div class="venue-card active-venue cursor-pointer flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-high/90 shadow-[0_8px_20px_-6px_rgba(255,90,31,0.25)] transition-all" data-venue="Indoor Banquet / Stage">
+              <div class="flex flex-col gap-space-sm">
+                <div class="flex items-center justify-between">
+                  <div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary-container">
+                    <span class="material-symbols-outlined text-[24px]">meeting_room</span>
+                  </div>
+                  <div class="venue-check w-6 h-6 rounded-full bg-primary-container flex items-center justify-center text-on-surface">
+                    <span class="material-symbols-outlined text-[16px]">check</span>
+                  </div>
+                </div>
+                <span class="font-headline-sm text-headline-sm font-bold text-on-surface">Indoor Venue</span>
+                <p class="font-body-sm text-body-sm text-secondary leading-relaxed">Ballroom, private club, banquet hall, or acoustic studio. Temperature-controlled with dedicated stable wall circuitry.</p>
+              </div>
+              <div class="pt-space-md mt-space-md flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold">
+                <span class="material-symbols-outlined text-[16px]">verified</span>
+                Optimal Sound Control
+              </div>
+            </div>
+            <!-- Outdoor Card -->
+            <div class="venue-card cursor-pointer flex flex-col justify-between p-space-lg rounded-xl bg-surface-container/60 hover:bg-surface-container-high transition-all" data-venue="Outdoor / Open Air">
+              <div class="flex flex-col gap-space-sm">
+                <div class="flex items-center justify-between">
+                  <div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary">
+                    <span class="material-symbols-outlined text-[24px]">deck</span>
+                  </div>
+                  <div class="venue-check w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-transparent">
+                    <span class="material-symbols-outlined text-[16px]">check</span>
+                  </div>
+                </div>
+                <span class="font-headline-sm text-headline-sm font-bold text-on-surface">Outdoor / Open Air</span>
+                <p class="font-body-sm text-body-sm text-secondary leading-relaxed">Lawn amphitheater, open terrace, beachside, or poolside pavilion. Requires generator backup and sun/rain canopy.</p>
+              </div>
+              <div class="pt-space-md mt-space-md flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+                <span class="material-symbols-outlined text-[16px]">wb_twilight</span>
+                Weather Clearance Needed
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Performance Language Multi-Select Chips -->
+        <div class="flex flex-col gap-space-md p-space-lg md:p-space-xl rounded-2xl bg-surface-container-low/90 backdrop-blur-xl shadow-xl">
+          <div class="flex flex-col gap-1">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-[22px]">translate</span>
+              <span class="font-headline-sm text-headline-sm font-bold text-on-surface">Performance &amp; Interaction Language</span>
+            </div>
+            <p class="font-body-sm text-body-sm text-secondary">Select languages the artist or MC should sing, perform, or engage the audience in.</p>
+          </div>
+          <div class="flex flex-wrap gap-2.5 pt-space-xs" id="language-chips-wrapper">
+            <button class="lang-chip selected px-space-md py-2 rounded-full font-label-md text-label-md transition-all flex items-center gap-1.5 bg-primary-container text-on-surface shadow-[0_4px_16px_-4px_rgba(255,90,31,0.4)] font-bold" data-lang="Hindi" type="button">
+              <span class="material-symbols-outlined text-[16px]">check</span>Hindi
+            </button>
+            <button class="lang-chip selected px-space-md py-2 rounded-full font-label-md text-label-md transition-all flex items-center gap-1.5 bg-primary-container text-on-surface shadow-[0_4px_16px_-4px_rgba(255,90,31,0.4)] font-bold" data-lang="English" type="button">
+              <span class="material-symbols-outlined text-[16px]">check</span>English
+            </button>
+            <button class="lang-chip px-space-md py-2 rounded-full font-label-md text-label-md transition-all flex items-center gap-1.5 bg-surface-container-high hover:bg-surface-container-highest text-secondary hover:text-on-surface" data-lang="Punjabi" type="button">
+              <span class="material-symbols-outlined text-[16px] hidden">check</span>Punjabi
+            </button>
+            <button class="lang-chip px-space-md py-2 rounded-full font-label-md text-label-md transition-all flex items-center gap-1.5 bg-surface-container-high hover:bg-surface-container-highest text-secondary hover:text-on-surface" data-lang="Bengali" type="button">
+              <span class="material-symbols-outlined text-[16px] hidden">check</span>Bengali
+            </button>
+            <button class="lang-chip px-space-md py-2 rounded-full font-label-md text-label-md transition-all flex items-center gap-1.5 bg-surface-container-high hover:bg-surface-container-highest text-secondary hover:text-on-surface" data-lang="Tamil / Telugu" type="button">
+              <span class="material-symbols-outlined text-[16px] hidden">check</span>Tamil / Telugu
+            </button>
+            <button class="lang-chip px-space-md py-2 rounded-full font-label-md text-label-md transition-all flex items-center gap-1.5 bg-surface-container-high hover:bg-surface-container-highest text-secondary hover:text-on-surface" data-lang="Spanish" type="button">
+              <span class="material-symbols-outlined text-[16px] hidden">check</span>Spanish
+            </button>
+            <button class="px-space-md py-2 rounded-full font-label-md text-label-md transition-all flex items-center gap-1 bg-surface-container text-secondary hover:text-on-surface hover:bg-surface-container-high" id="add-lang-btn" type="button">
+              <span class="material-symbols-outlined text-[16px]">add</span>Add Other
+            </button>
+          </div>
+        </div>
+
+        <!-- 5. Additional Notes & Custom Requests -->
+        <div class="flex flex-col gap-space-md p-space-lg md:p-space-xl rounded-2xl bg-surface-container-low/90 backdrop-blur-xl shadow-xl">
+          <div class="flex flex-col gap-1">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[22px]">notes</span>
+                <label class="font-headline-sm text-headline-sm font-bold text-on-surface" for="custom-notes">Special Requests &amp; Crowd Demographics</label>
+              </div>
+              <span class="font-label-sm text-label-sm text-secondary" id="char-counter">0 / 1000</span>
+            </div>
+            <p class="font-body-sm text-body-sm text-secondary">Mention specific songs, VIP walk-in timestamps, dress code, or strict do-not-play lists.</p>
+          </div>
+          <div class="relative w-full">
+            <textarea class="w-full p-space-md rounded-xl bg-surface-container-lowest/80 text-on-surface font-body-sm text-body-sm placeholder:text-secondary focus:outline-none focus:ring-2 focus:ring-primary-container resize-none leading-relaxed" id="custom-notes" placeholder="Mention special songs, artist entrance timing, dress code (black tie, festive), crowd demographics, or specific song do-not-play list..." rows="4"></textarea>
+          </div>
+          <!-- Quick Tags -->
+          <div class="flex items-center gap-2 flex-wrap text-secondary">
+            <span class="font-label-sm text-label-sm">Quick tags:</span>
+            <button class="quick-tag px-2 py-0.5 rounded-md bg-surface-container text-secondary hover:text-on-surface font-badge-micro text-badge-micro transition-colors" type="button">+ Black Tie Dress Code</button>
+            <button class="quick-tag px-2 py-0.5 rounded-md bg-surface-container text-secondary hover:text-on-surface font-badge-micro text-badge-micro transition-colors" type="button">+ CEO Keynote Intro</button>
+            <button class="quick-tag px-2 py-0.5 rounded-md bg-surface-container text-secondary hover:text-on-surface font-badge-micro text-badge-micro transition-colors" type="button">+ Clean Lyrics Only</button>
+          </div>
+        </div>
+
+        <!-- Bottom Navigation Action Bar -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-md pb-space-lg">
+          <a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-space-lg py-space-sm rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors" href="step-2-performer-details.html">
+            <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+            <span>Back: Performer Details</span>
+          </a>
+          <div class="flex flex-col sm:flex-row items-center gap-space-md w-full sm:w-auto">
+            <span class="hidden md:inline-block font-label-sm text-label-sm text-secondary">All selections can be reviewed before publishing</span>
+            <button class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-space-xl py-space-sm rounded-full bg-primary-container hover:bg-[#ff723f] text-on-surface font-label-md text-label-md shadow-[0_10px_28px_-6px_rgba(255,90,31,0.5)] transition-all transform hover:-translate-y-0.5 font-bold" id="next-to-review-btn" type="button">
+              <span>Next: Review &amp; Post</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Sticky "Your Requirement" Live Summary Sidebar (5 Cols) -->
+      <div class="lg:col-span-5 flex flex-col gap-space-lg lg:sticky lg:top-28">
+        <div class="flex flex-col gap-space-md p-space-lg rounded-2xl bg-surface-container-low/95 backdrop-blur-xl shadow-2xl">
+          <!-- Summary Header with Live Sync Indicator -->
+          <div class="flex items-center justify-between pb-space-sm border-b border-white/[0.08]">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-[20px]">assignment</span>
+              <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Your Requirement</h3>
+            </div>
+            <div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 font-label-sm text-label-sm font-semibold">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              <span>Live Sync</span>
+            </div>
+          </div>
+          <!-- Step 1 Snapshot -->
+          <div class="flex flex-col gap-1 p-space-sm rounded-xl bg-surface-container-lowest/60">
+            <div class="flex items-center justify-between text-secondary">
+              <span class="font-badge-micro text-badge-micro uppercase tracking-wider font-bold">Step 1 • Event Basics</span>
+              <a class="font-label-sm text-label-sm text-primary hover:underline" href="step-1-event-basics.html">Edit</a>
+            </div>
+            <span class="font-label-md text-label-md font-semibold text-on-surface truncate" id="sum-event-name">—</span>
+            <div class="flex items-center gap-2 font-body-sm text-body-sm text-secondary">
+              <span class="material-symbols-outlined text-[14px]">calendar_month</span>
+              <span id="sum-date">—</span>
+              <span>•</span>
+              <span id="sum-city">—</span>
+            </div>
+          </div>
+          <!-- Step 2 Performer Snapshot -->
+          <div class="flex flex-col gap-1 p-space-sm rounded-xl bg-surface-container-lowest/60">
+            <div class="flex items-center justify-between text-secondary">
+              <span class="font-badge-micro text-badge-micro uppercase tracking-wider font-bold">Step 2 • Performer Type</span>
+              <a class="font-label-sm text-label-sm text-primary hover:underline" href="step-2-performer-details.html">Edit</a>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-primary-container/20 text-primary font-badge-micro text-badge-micro font-bold uppercase" id="sum-performer-type">DJ</span>
+            </div>
+            <div class="flex items-center gap-2 font-body-sm text-body-sm text-secondary pt-0.5">
+              <span class="material-symbols-outlined text-[14px]">music_note</span>
+              <span id="sum-performer-dur">—</span>
+            </div>
+          </div>
+          <!-- Step 3 Active Live Specifications -->
+          <div class="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container/90 shadow-[0_0_24px_-4px_rgba(255,90,31,0.2)]">
+            <div class="flex items-center justify-between">
+              <span class="font-badge-micro text-badge-micro uppercase tracking-widest text-primary font-extrabold flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                Active Step 3 Selection
+              </span>
+              <span class="font-label-sm text-label-sm text-primary">Configuring</span>
+            </div>
+            <div class="flex flex-col gap-space-xs pt-1">
+              <div class="flex items-center justify-between py-1 border-b border-white/[0.04]">
+                <span class="font-body-sm text-body-sm text-secondary">Budget Allocation:</span>
+                <span class="font-label-md text-label-md font-bold text-on-surface" id="sidebar-budget">₹60,000 – ₹1,50,000</span>
+              </div>
+              <div class="flex items-center justify-between py-1 border-b border-white/[0.04]">
+                <span class="font-body-sm text-body-sm text-secondary">Sound &amp; Lights:</span>
+                <span class="font-label-md text-label-md font-bold text-emerald-400" id="sidebar-gear">Host Provided (Plug &amp; Play)</span>
+              </div>
+              <div class="flex items-center justify-between py-1 border-b border-white/[0.04]">
+                <span class="font-body-sm text-body-sm text-secondary">Venue Setting:</span>
+                <span class="font-label-md text-label-md font-bold text-on-surface" id="sidebar-venue">Indoor Banquet / Stage</span>
+              </div>
+              <div class="flex items-start justify-between py-1">
+                <span class="font-body-sm text-body-sm text-secondary">Languages:</span>
+                <span class="font-label-md text-label-md font-bold text-on-surface text-right" id="sidebar-lang">Hindi, English</span>
+              </div>
+            </div>
+          </div>
+          <!-- Estimated Match -->
+          <div class="flex items-start gap-space-sm p-space-md rounded-xl bg-primary-container/10">
+            <span class="material-symbols-outlined text-primary-container text-[22px] shrink-0">bolt</span>
+            <div class="flex flex-col gap-0.5">
+              <span class="font-label-md text-label-md font-bold text-on-surface">Instant Market Liquidity</span>
+              <p class="font-body-sm text-body-sm text-secondary"><strong class="text-on-surface">3+ verified artist pitches</strong> typically received within the first 4 hours of publishing for this budget tier.</p>
+            </div>
+          </div>
+          <!-- Trust -->
+          <div class="flex items-center justify-between pt-space-xs text-secondary font-label-sm text-label-sm">
+            <div class="flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+              <span>GoPratle Payment Escrow</span>
+            </div>
+            <a class="text-primary hover:underline inline-flex items-center gap-0.5" href="javascript:void(0)" id="concierge-link">
+              <span>Talk to Concierge</span>
+              <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+            </a>
+          </div>
+        </div>
+        <!-- Quick FAQ Tip Panel -->
+        <div class="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container-lowest/60">
+          <span class="font-label-sm text-label-sm font-bold text-on-surface">💡 Host Tip for Sound Requirements</span>
+          <p class="font-body-sm text-body-sm text-secondary leading-relaxed">If your venue does not include wireless feedback monitors or line mixers, consider toggling Sound/Lights to "Performer to Bring Gear" so artists quote inclusive packages.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</main>
+
+<!-- Toast Container -->
+<div id="toast-container" style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999;display:flex;flex-direction:column;gap:0.5rem;pointer-events:none;"></div>
+
+<footer class="w-full bg-surface-container-lowest border-t border-white/[0.08] mt-space-3xl">
+  <div class="max-w-[1280px] mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-3xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter-lg pb-space-2xl border-b border-white/[0.08]">
+      <div class="lg:col-span-2 flex flex-col gap-space-md pr-0 lg:pr-gutter-lg">
+        <div class="flex items-center gap-space-sm">
+          <img alt="GoPratle Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xjvc9315TLRwPfxhYRyN-phA82HhGheNGKEykP4RkY-D8g13qg3rr4PGS2yIHlPR4JhqKQlONMi3vz-z_dSCMZAc9giDq5WGZnySswFNIOQjmlrdVhtb-ZLa5wUYpio3CL5ICq127fiBmP_lPqMQ6h_tuCB832OycGyPlSaVEykYeT1LyO4FjE3uTYXQD9sG2xvlyqOschrPxxn8R_D0Rv9f3EQcLIy2Gi6WR1obB_9h8bPrQkHiMgfQ"/>
+          <span class="flex items-center gap-1 font-headline-sm text-headline-sm font-bold text-on-surface"><span>GoPratle</span><span class="h-1.5 w-1.5 rounded-full bg-primary-container inline-block"></span></span>
+        </div>
+        <p class="font-body-sm text-body-sm text-secondary max-w-sm leading-relaxed">The trusted marketplace for event professionals and unforgettable experiences.</p>
+      </div>
+      <div class="flex flex-col gap-space-sm">
+        <h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider font-bold mb-space-xs">Explore Categories</h4>
+        <nav class="flex flex-col gap-space-xs">
+          <a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" href="#">Planners</a>
+          <a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" href="#">Performers</a>
+          <a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" href="#">Crew</a>
+        </nav>
+      </div>
+      <div class="flex flex-col gap-space-sm">
+        <h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider font-bold mb-space-xs">Platform</h4>
+        <nav class="flex flex-col gap-space-xs">
+          <a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" href="#">How it Works</a>
+          <a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" href="#">For Planners</a>
+          <a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" href="#">Pricing</a>
+          <a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" href="#">Trust &amp; Safety</a>
+        </nav>
+      </div>
+      <div class="flex flex-col gap-space-sm">
+        <h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider font-bold mb-space-xs">Company</h4>
+        <nav class="flex flex-col gap-space-xs">
+          <a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" href="#">About Us</a>
+          <a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" href="#">Contact</a>
+          <a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" href="#">Privacy Policy</a>
+          <a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" href="#">Terms</a>
+        </nav>
+      </div>
+    </div>
+    <div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md text-center sm:text-left">
+      <p class="font-label-sm text-label-sm text-secondary">© 2025 GoPratle Technologies Inc. All rights reserved.</p>
+      <div class="flex items-center gap-space-lg">
+        <a class="font-label-sm text-label-sm text-secondary hover:text-on-surface transition-colors" href="#">Privacy</a>
+        <a class="font-label-sm text-label-sm text-secondary hover:text-on-surface transition-colors" href="#">Terms</a>
+        <a class="font-label-sm text-label-sm text-secondary hover:text-on-surface transition-colors" href="#">Security</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="module">
+  import { getStore, saveStore, showToast } from './js/marketplace-store.js';
+
+  // ─── Toast helper ────────────────────────────────────────────────────────
+  window.gopratleShowToast = showToast;
+
+  // ─── State ───────────────────────────────────────────────────────────────
+  let store = getStore();
+
+  // ─── Populate Live Summary from Store ────────────────────────────────────
+  function updateSidebar() {
+    const el = id => document.getElementById(id);
+    if (el('sum-event-name')) el('sum-event-name').textContent = store.eventName || '—';
+    if (el('sum-date')) el('sum-date').textContent = store.eventDate || '—';
+    if (el('sum-city')) el('sum-city').textContent = store.city || '—';
+    if (el('sum-performer-type')) el('sum-performer-type').textContent = store.performerType || 'DJ';
+    if (el('sum-performer-dur')) el('sum-performer-dur').textContent = store.performerDuration || '—';
+    if (el('sidebar-budget')) el('sidebar-budget').textContent = store.performerBudgetDisplay || '₹60,000 – ₹1,50,000';
+    if (el('display-budget-range')) el('display-budget-range').textContent = store.performerBudgetDisplay || '₹60,000 – ₹1,50,000';
+    if (el('sidebar-venue')) el('sidebar-venue').textContent = store.performerStageSetup || 'Indoor Banquet / Stage';
+    if (el('sidebar-lang')) el('sidebar-lang').textContent = store.performerLanguage || 'Hindi, English';
+  }
+
+  // ─── Budget Preset Chips ──────────────────────────────────────────────────
+  const presetChips = document.querySelectorAll('.preset-chip');
+  presetChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      presetChips.forEach(c => {
+        c.classList.remove('bg-primary-container', 'text-on-surface', 'font-bold', 'shadow-[0_4px_12px_-2px_rgba(255,90,31,0.4)]', 'active-chip');
+        c.classList.add('bg-surface-container-high', 'text-secondary');
+      });
+      chip.classList.remove('bg-surface-container-high', 'text-secondary');
+      chip.classList.add('bg-primary-container', 'text-on-surface', 'font-bold', 'shadow-[0_4px_12px_-2px_rgba(255,90,31,0.4)]', 'active-chip');
+      const label = chip.getAttribute('data-label');
+      const minVal = parseInt(chip.getAttribute('data-min')) || 60000;
+      const maxVal = parseInt(chip.getAttribute('data-max')) || 150000;
+      const displayEl = document.getElementById('display-budget-range');
+      const sidebarBudget = document.getElementById('sidebar-budget');
+      if (displayEl) displayEl.textContent = label;
+      if (sidebarBudget) sidebarBudget.textContent = label;
+      store = saveStore({ performerBudgetDisplay: label, performerBudgetMin: minVal, performerBudgetMax: maxVal });
+    });
+  });
+
+  // ─── AV Toggle ───────────────────────────────────────────────────────────
+  const avToggle = document.getElementById('av-toggle');
+  const avStateBox = document.getElementById('av-state-box');
+  const sidebarGear = document.getElementById('sidebar-gear');
+  if (avToggle) {
+    // Sync initial state from store
+    const initialSound = store.performerSound || 'venue-provides';
+    avToggle.checked = (initialSound === 'venue-provides');
+    avToggle.addEventListener('change', () => {
+      const isHostProvides = avToggle.checked;
+      const soundVal = isHostProvides ? 'venue-provides' : 'performer-brings';
+      if (avStateBox) {
+        avStateBox.innerHTML = isHostProvides
+          ? `<div class="flex items-center gap-2"><span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-badge-micro text-badge-micro uppercase tracking-wider font-bold"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Host Supplies AV</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Plug &amp; Play Setup</span></div><p class="font-body-sm text-body-sm text-secondary leading-relaxed">Venue or host provides a calibrated PA system, subwoofers, wireless handheld mics, and an intelligent stage light rig.</p>`
+          : `<div class="flex items-center gap-2"><span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-400 font-badge-micro text-badge-micro uppercase tracking-wider font-bold"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>Performer Brings Gear</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Self-Contained Rig</span></div><p class="font-body-sm text-body-sm text-secondary leading-relaxed">Artist must bring own portable sound amplification, consoles, wireless mics, and basic ambient mood lighting.</p>`;
+      }
+      if (sidebarGear) {
+        sidebarGear.textContent = isHostProvides ? 'Host Provided (Plug & Play)' : 'Artist to Supply AV Rig';
+        sidebarGear.className = isHostProvides
+          ? 'font-label-md text-label-md font-bold text-emerald-400'
+          : 'font-label-md text-label-md font-bold text-amber-400';
+      }
+      store = saveStore({ performerSound: soundVal });
+    });
+  }
+
+  // ─── Venue Card Selection ─────────────────────────────────────────────────
+  const venueCards = document.querySelectorAll('.venue-card');
+  const sidebarVenue = document.getElementById('sidebar-venue');
+  // Sync from store
+  const storedVenue = store.performerStageSetup || 'Indoor Banquet / Stage';
+  venueCards.forEach(card => {
+    if (card.getAttribute('data-venue') === storedVenue) {
+      card.classList.add('active-venue', 'bg-surface-container-high/90', 'shadow-[0_8px_20px_-6px_rgba(255,90,31,0.25)]');
+      card.classList.remove('bg-surface-container/60');
+      const check = card.querySelector('.venue-check');
+      if (check) check.className = 'venue-check w-6 h-6 rounded-full bg-primary-container flex items-center justify-center text-on-surface';
+    }
+  });
+  venueCards.forEach(card => {
+    card.addEventListener('click', () => {
+      venueCards.forEach(c => {
+        c.classList.remove('active-venue', 'bg-surface-container-high/90', 'shadow-[0_8px_20px_-6px_rgba(255,90,31,0.25)]');
+        c.classList.add('bg-surface-container/60');
+        const check = c.querySelector('.venue-check');
+        if (check) check.className = 'venue-check w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-transparent';
+      });
+      card.classList.remove('bg-surface-container/60');
+      card.classList.add('active-venue', 'bg-surface-container-high/90', 'shadow-[0_8px_20px_-6px_rgba(255,90,31,0.25)]');
+      const check = card.querySelector('.venue-check');
+      if (check) check.className = 'venue-check w-6 h-6 rounded-full bg-primary-container flex items-center justify-center text-on-surface';
+      const venueVal = card.getAttribute('data-venue');
+      if (sidebarVenue) sidebarVenue.textContent = venueVal;
+      store = saveStore({ performerStageSetup: venueVal });
+    });
+  });
+
+  // ─── Language Chips ───────────────────────────────────────────────────────
+  const langChips = document.querySelectorAll('.lang-chip');
+  const sidebarLang = document.getElementById('sidebar-lang');
+  // Sync from store
+  const storedLangs = store.performerLanguage
+    ? store.performerLanguage.split(/\s*[,&]\s*/).map(l => l.trim())
+    : ['Hindi', 'English'];
+  langChips.forEach(chip => {
+    const lang = chip.getAttribute('data-lang');
+    const checkIcon = chip.querySelector('.material-symbols-outlined');
+    if (storedLangs.includes(lang)) {
+      chip.classList.add('selected', 'bg-primary-container', 'text-on-surface', 'shadow-[0_4px_16px_-4px_rgba(255,90,31,0.4)]', 'font-bold');
+      chip.classList.remove('bg-surface-container-high', 'text-secondary');
+      if (checkIcon) checkIcon.classList.remove('hidden');
+    }
+  });
+
+  function updateLangSidebar() {
+    const activeChips = document.querySelectorAll('.lang-chip.selected');
+    const langs = Array.from(activeChips).map(c => c.getAttribute('data-lang'));
+    if (sidebarLang) sidebarLang.textContent = langs.length ? langs.join(', ') : 'None selected';
+    store = saveStore({ performerLanguage: langs.join(' & ') });
+  }
+
+  langChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const isSelected = chip.classList.contains('selected');
+      const checkIcon = chip.querySelector('.material-symbols-outlined');
+      if (isSelected) {
+        chip.classList.remove('selected', 'bg-primary-container', 'text-on-surface', 'shadow-[0_4px_16px_-4px_rgba(255,90,31,0.4)]', 'font-bold');
+        chip.classList.add('bg-surface-container-high', 'text-secondary');
+        if (checkIcon) checkIcon.classList.add('hidden');
+      } else {
+        chip.classList.add('selected', 'bg-primary-container', 'text-on-surface', 'shadow-[0_4px_16px_-4px_rgba(255,90,31,0.4)]', 'font-bold');
+        chip.classList.remove('bg-surface-container-high', 'text-secondary');
+        if (checkIcon) checkIcon.classList.remove('hidden');
+      }
+      updateLangSidebar();
+    });
+  });
+
+  // ─── Notes + Counter ──────────────────────────────────────────────────────
+  const textarea = document.getElementById('custom-notes');
+  const counter = document.getElementById('char-counter');
+  if (textarea) {
+    textarea.value = store.performerNotes || '';
+    if (counter) counter.textContent = `${textarea.value.length} / 1000`;
+    textarea.addEventListener('input', () => {
+      if (counter) counter.textContent = `${textarea.value.length} / 1000`;
+      store = saveStore({ performerNotes: textarea.value });
+    });
+  }
+
+  // ─── Quick Tags ───────────────────────────────────────────────────────────
+  document.querySelectorAll('.quick-tag').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (textarea) {
+        const tagText = btn.textContent.replace(/^\+\s*/, '').trim();
+        const sep = textarea.value.trim() ? '. ' : '';
+        textarea.value += sep + tagText;
+        textarea.dispatchEvent(new Event('input'));
+      }
+    });
+  });
+
+  // ─── Misc Buttons ─────────────────────────────────────────────────────────
+  document.getElementById('save-exit-btn')?.addEventListener('click', () => {
+    showToast('Progress saved successfully!', 'success');
+    setTimeout(() => { window.location.href = 'index.html'; }, 600);
+  });
+  document.getElementById('concierge-link')?.addEventListener('click', () => {
+    showToast('Host Support: Concierge available 24/7 at support@gopratle.com', 'info');
+  });
+  document.getElementById('add-lang-btn')?.addEventListener('click', () => {
+    showToast('Custom language support coming soon!', 'info');
+  });
+
+  // ─── Next Button (Smart Routing) ──────────────────────────────────────────
+  document.getElementById('next-to-review-btn')?.addEventListener('click', () => {
+    updateLangSidebar();
+    sessionStorage.setItem('gopratle_step3_page', 'step-3-performer-preferences.html');
+    sessionStorage.setItem('gopratle_step2_page', 'step-2-performer-details.html');
+    showToast('Performer preferences saved! Proceeding to review...', 'success');
+    setTimeout(() => { window.location.href = 'step-4-review-publish.html'; }, 500);
+  });
+
+  // ─── Init ─────────────────────────────────────────────────────────────────
+  updateSidebar();
+</script>
+</body></html>

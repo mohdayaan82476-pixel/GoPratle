@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/>
+<title>Step 3: Planner Preferences &amp; Style – GoPratle</title>
+<meta name="description" content="Set your event style, theme, timeline flexibility, and planner preferences on GoPratle."/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "primary-container": "#ff5a1f",
+          "inverse-on-surface": "#2f3035",
+          "error": "#ffb4ab",
+          "secondary-fixed-dim": "#c2c6d8",
+          "surface-container-highest": "#333539",
+          "surface": "#111317",
+          "on-tertiary-container": "#501900",
+          "background": "#111317",
+          "tertiary-container": "#e07444",
+          "inverse-surface": "#e2e2e8",
+          "on-primary-container": "#541400",
+          "outline-variant": "#5b4038",
+          "primary-fixed-dim": "#ffb59e",
+          "tertiary-fixed": "#ffdbcd",
+          "on-background": "#e2e2e8",
+          "primary": "#ffb59e",
+          "on-error-container": "#ffdad6",
+          "inverse-primary": "#ae3200",
+          "on-surface": "#e2e2e8",
+          "on-secondary-fixed": "#161b28",
+          "tertiary": "#ffb598",
+          "on-tertiary-fixed": "#360f00",
+          "surface-tint": "#ffb59e",
+          "on-secondary": "#2b303e",
+          "primary-fixed": "#ffdbd0",
+          "surface-bright": "#37393e",
+          "surface-container-high": "#282a2e",
+          "secondary-container": "#424655",
+          "on-primary": "#5e1700",
+          "on-surface-variant": "#e4beb3",
+          "surface-dim": "#111317",
+          "on-tertiary-fixed-variant": "#7e2c00",
+          "surface-container": "#1e2024",
+          "on-primary-fixed": "#3a0b00",
+          "surface-container-low": "#1a1c20",
+          "on-tertiary": "#591d00",
+          "outline": "#ab897f",
+          "tertiary-fixed-dim": "#ffb598",
+          "surface-container-lowest": "#0c0e12",
+          "on-secondary-container": "#b0b5c6",
+          "on-secondary-fixed-variant": "#424655",
+          "surface-variant": "#333539",
+          "secondary-fixed": "#dee2f4",
+          "on-error": "#690005",
+          "on-primary-fixed-variant": "#852400",
+          "secondary": "#c2c6d8",
+          "error-container": "#93000a"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-2xl": "4rem",
+          "space-3xl": "6rem",
+          "margin-md": "3rem",
+          "margin": "1.5rem",
+          "space-xl": "2.5rem",
+          "gutter-sm": "1rem",
+          "margin-lg": "5rem",
+          "space-md": "1rem",
+          "gutter-lg": "2rem",
+          "gutter": "1.5rem",
+          "space-sm": "0.5rem",
+          "space-xs": "0.25rem",
+          "space-lg": "1.5rem"
+        },
+        "fontFamily": {
+          "headline-xl": ["Plus Jakarta Sans"],
+          "label-sm": ["Plus Jakarta Sans"],
+          "headline-md": ["Plus Jakarta Sans"],
+          "display-hero-mobile": ["Plus Jakarta Sans"],
+          "display-hero": ["Plus Jakarta Sans"],
+          "label-md": ["Plus Jakarta Sans"],
+          "headline-sm": ["Plus Jakarta Sans"],
+          "badge-micro": ["Plus Jakarta Sans"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "body-lg": ["Plus Jakarta Sans"],
+          "headline-xl-mobile": ["Plus Jakarta Sans"],
+          "headline-lg": ["Plus Jakarta Sans"],
+          "body-md": ["Plus Jakarta Sans"]
+        },
+        "fontSize": {
+          "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "700"}],
+          "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+          "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+          "display-hero-mobile": ["38px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+          "display-hero": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+          "label-md": ["14px", {"lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+          "headline-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "badge-micro": ["11px", {"lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700"}],
+          "body-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}],
+          "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400"}],
+          "headline-xl-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+          "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+          "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}]
+        }
+      },
+    },
+  };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-surface">
+
+<!-- HEADER -->
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/70 backdrop-blur-xl border-b border-white/[0.08]">
+  <div class="h-20 max-w-[1280px] mx-auto px-margin md:px-margin-md lg:px-margin-lg flex items-center justify-between">
+    <div class="flex items-center gap-space-sm">
+      <img alt="GoPratle Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xjvc9315TLRwPfxhYRyN-phA82HhGheNGKEykP4RkY-D8g13qg3rr4PGS2yIHlPR4JhqKQlONMi3vz-z_dSCMZAc9giDq5WGZnySswFNIOQjmlrdVhtb-ZLa5wUYpio3CL5ICq127fiBmP_lPqMQ6h_tuCB832OycGyPlSaVEykYeT1LyO4FjE3uTYXQD9sG2xvlyqOschrPxxn8R_D0Rv9f3EQcLIy2Gi6WR1obB_9h8bPrQkHiMgfQ"/>
+      <a class="flex items-center gap-1 font-headline-md text-headline-md tracking-tight font-extrabold text-on-surface" href="index.html"><span>GoPratle</span><span class="h-2 w-2 rounded-full bg-primary-container inline-block translate-y-0.5"></span></a>
+    </div>
+    <nav class="hidden md:flex items-center gap-gutter">
+      <a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="index.html#how-it-works">How it works</a>
+      <a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="index.html#categories">For Planners</a>
+      <a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="index.html#categories">Categories</a>
+    </nav>
+    <div class="flex items-center gap-space-md">
+      <a class="hidden sm:inline-flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors px-space-sm py-space-xs" href="javascript:void(0)">Sign In</a>
+      <a class="inline-flex items-center justify-center bg-primary-container hover:bg-[#ff723f] text-on-surface font-label-md text-label-md px-space-lg py-space-sm rounded-full shadow-[0_8px_24px_-4px_rgba(255,90,31,0.4)] transition-all transform hover:-translate-y-0.5" href="step-1-event-basics.html">Post a Requirement</a>
+      <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="w-full pt-20 bg-surface">
+<div class="flex flex-col w-full">
+
+<!-- Sub-header Workflow & Stepper Bar -->
+<section class="w-full bg-surface-container-lowest sticky top-20 z-40 backdrop-blur-md">
+  <div class="max-w-[1280px] mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-sm flex flex-col md:flex-row items-center justify-between gap-space-sm">
+    <!-- Back Link & Auto-save Status -->
+    <div class="flex items-center gap-space-md w-full md:w-auto justify-between md:justify-start">
+      <a class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary hover:text-on-surface transition-colors group" href="step-2-planner-details.html">
+        <span class="material-symbols-outlined text-[18px] group-hover:-translate-x-0.5 transition-transform">arrow_back</span>
+        <span>Back to Step 2</span>
+      </a>
+      <div class="inline-flex items-center gap-2 bg-surface-container-low px-3 py-1 rounded-full">
+        <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="font-label-sm text-label-sm text-secondary">Draft auto-saved just now</span>
+      </div>
+    </div>
+    <!-- Stepper Indicator -->
+    <nav aria-label="Requirement Steps" class="flex items-center gap-2 sm:gap-3 overflow-x-auto max-w-full py-1">
+      <a class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high hover:bg-surface-bright text-on-surface transition-all shrink-0" href="step-1-event-basics.html">
+        <span class="flex items-center justify-center w-4 h-4 rounded-full bg-primary-container text-on-surface text-[10px] font-bold">✓</span>
+        <span class="font-label-sm text-label-sm text-secondary">1. Basics</span>
+      </a>
+      <span class="text-surface-container-highest shrink-0">/</span>
+      <a class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high hover:bg-surface-bright text-on-surface transition-all shrink-0" href="step-2-planner-details.html">
+        <span class="flex items-center justify-center w-4 h-4 rounded-full bg-primary-container text-on-surface text-[10px] font-bold">✓</span>
+        <span class="font-label-sm text-label-sm text-secondary">2. Planner Scope</span>
+      </a>
+      <span class="text-surface-container-highest shrink-0">/</span>
+      <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary-container/15 text-primary-fixed shadow-[0_0_16px_rgba(255,90,31,0.25)] shrink-0">
+        <span class="flex items-center justify-center w-4 h-4 rounded-full bg-primary-container text-on-surface text-[10px] font-bold">3</span>
+        <span class="font-label-md text-label-md font-bold text-on-surface">Preferences &amp; Vibe</span>
+        <span class="h-1.5 w-1.5 rounded-full bg-primary-container"></span>
+      </div>
+      <span class="text-surface-container-highest shrink-0">/</span>
+      <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-secondary/60 shrink-0">
+        <span class="flex items-center justify-center w-4 h-4 rounded-full bg-surface-container-high text-secondary text-[10px] font-medium">4</span>
+        <span class="font-label-sm text-label-sm text-secondary/70">Review &amp; Publish</span>
+      </div>
+    </nav>
+    <!-- Save & Exit -->
+    <div class="hidden lg:flex items-center">
+      <button class="inline-flex items-center gap-1.5 font-label-md text-label-md text-secondary hover:text-on-surface px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-all" id="save-exit-btn" type="button">
+        <span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+        <span>Save &amp; Exit</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Ambient Backdrop Glows -->
+<div class="relative w-full max-w-[1280px] mx-auto px-margin md:px-margin-md lg:px-margin-lg pt-space-xl pb-space-3xl">
+  <div class="absolute top-16 left-1/4 w-96 h-96 bg-primary-container/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+  <div class="absolute bottom-20 right-10 w-80 h-80 bg-tertiary-container/5 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+
+  <!-- Main Section Header -->
+  <header class="mb-space-xl max-w-3xl">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-primary-fixed mb-space-sm">
+      <span class="h-1.5 w-1.5 rounded-full bg-primary-container"></span>
+      <span class="font-label-sm text-label-sm tracking-wider uppercase font-bold text-primary">STEP 3 OF 4 • PLANNER PREFERENCES</span>
+    </div>
+    <h1 class="font-headline-xl text-headline-xl font-extrabold text-on-surface tracking-tight">Set the Style &amp; Preferences</h1>
+    <p class="font-body-lg text-body-lg text-secondary mt-2">Guide your event planner on aesthetic direction, scheduling flexibility, and custom vision.</p>
+  </header>
+
+  <!-- Layout Grid: Left Form (8/12) + Sticky Right Summary (4/12) -->
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-start">
+
+    <!-- FORM COLUMN -->
+    <div class="lg:col-span-8 flex flex-col gap-space-xl">
+
+      <!-- SECTION 1: Event Theme or Style -->
+      <section class="p-space-lg rounded-2xl bg-surface-container-low shadow-xl">
+        <div class="flex items-center justify-between mb-space-md">
+          <div>
+            <div class="flex items-center gap-2">
+              <h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Event Theme or Style</h2>
+              <span class="text-primary-container font-bold text-sm">*Required</span>
+            </div>
+            <p class="font-body-sm text-body-sm text-secondary mt-0.5">Select visual themes that resonate with your target ambiance (multi-select supported).</p>
+          </div>
+          <span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container-high text-secondary" id="theme-count-badge">0 Selected</span>
+        </div>
+        <!-- Style Selection Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-space-sm" id="theme-selector-grid">
+          <button class="theme-card group relative text-left p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high transition-all" data-theme="Traditional" type="button">
+            <div class="flex items-start justify-between">
+              <span class="material-symbols-outlined text-secondary text-2xl group-hover:text-primary transition-colors">temple_hindu</span>
+              <span class="theme-indicator w-4 h-4 rounded-full bg-surface-container-high"></span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface text-base font-bold mt-space-md">Traditional</h3>
+            <p class="font-body-sm text-body-sm text-secondary text-xs mt-1">Cultural protocols, heritage motifs, ceremonial grandeur.</p>
+          </button>
+          <button class="theme-card group relative text-left p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high transition-all" data-theme="Modern" type="button">
+            <div class="flex items-start justify-between">
+              <span class="material-symbols-outlined text-secondary text-2xl group-hover:text-primary transition-colors">apartment</span>
+              <span class="theme-indicator w-4 h-4 rounded-full bg-surface-container-high"></span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface text-base font-bold mt-space-md">Modern</h3>
+            <p class="font-body-sm text-body-sm text-secondary text-xs mt-1">Sleek lines, contemporary tech, ambient illumination.</p>
+          </button>
+          <button class="theme-card group relative text-left p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high transition-all" data-theme="Minimal" type="button">
+            <div class="flex items-start justify-between">
+              <span class="material-symbols-outlined text-secondary text-2xl group-hover:text-primary transition-colors">crop_free</span>
+              <span class="theme-indicator w-4 h-4 rounded-full bg-surface-container-high"></span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface text-base font-bold mt-space-md">Minimal</h3>
+            <p class="font-body-sm text-body-sm text-secondary text-xs mt-1">Architectural discipline, monochrome, zero clutter.</p>
+          </button>
+          <button class="theme-card group relative text-left p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high transition-all" data-theme="Luxury" type="button">
+            <div class="flex items-start justify-between">
+              <span class="material-symbols-outlined text-secondary text-2xl group-hover:text-primary transition-colors">diamond</span>
+              <span class="theme-indicator w-4 h-4 rounded-full bg-surface-container-high"></span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface text-base font-bold mt-space-md">Luxury</h3>
+            <p class="font-body-sm text-body-sm text-secondary text-xs mt-1">Opulent drapery, grand floral arches, premium brassware.</p>
+          </button>
+          <button class="theme-card group relative text-left p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high transition-all" data-theme="Rustic" type="button">
+            <div class="flex items-start justify-between">
+              <span class="material-symbols-outlined text-secondary text-2xl group-hover:text-primary transition-colors">nature</span>
+              <span class="theme-indicator w-4 h-4 rounded-full bg-surface-container-high"></span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface text-base font-bold mt-space-md">Rustic</h3>
+            <p class="font-body-sm text-body-sm text-secondary text-xs mt-1">Boho foliage, reclaimed timber, earthy warm glow.</p>
+          </button>
+          <div class="flex flex-col justify-center p-space-md rounded-xl bg-surface-container/60 hover:bg-surface-container transition-all">
+            <span class="material-symbols-outlined text-primary-container text-2xl mb-1">auto_awesome</span>
+            <span class="font-label-md text-label-md text-on-surface font-semibold">Custom Concept</span>
+            <input class="mt-2 w-full text-xs bg-surface-container-lowest px-2.5 py-1.5 rounded-lg text-on-surface placeholder:text-secondary/50 focus:outline-none focus:ring-1 focus:ring-primary-container" id="custom-theme-input" placeholder="+ Custom Theme (e.g. Cyberpunk)" type="text"/>
+          </div>
+        </div>
+        <!-- Vibe Chips -->
+        <div class="mt-space-md pt-space-md flex flex-wrap items-center gap-2 bg-surface-container/30 p-space-sm rounded-xl">
+          <span class="font-label-sm text-label-sm text-secondary">Common vibes:</span>
+          <span class="vibe-chip font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-on-surface cursor-pointer hover:bg-surface-container-highest transition-colors">✨ High Energy</span>
+          <span class="vibe-chip font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-on-surface cursor-pointer hover:bg-surface-container-highest transition-colors">🍷 Intimate Networking</span>
+          <span class="vibe-chip font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-on-surface cursor-pointer hover:bg-surface-container-highest transition-colors">🌿 Eco-Conscious</span>
+          <span class="vibe-chip font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-on-surface cursor-pointer hover:bg-surface-container-highest transition-colors">🏛️ Heritage Estate</span>
+        </div>
+      </section>
+
+      <!-- SECTION 2: Timeline & Date Flexibility -->
+      <section class="p-space-lg rounded-2xl bg-surface-container-low shadow-xl">
+        <div class="mb-space-md">
+          <div class="flex items-center gap-2">
+            <h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Timeline &amp; Date Flexibility</h2>
+            <span class="text-primary-container font-bold text-sm">*Required</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-secondary mt-0.5">Let planners know if vendor booking dates can shift for better cost or venue choice.</p>
+        </div>
+        <!-- Radio Selection Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md" id="timeline-selector">
+          <!-- Fixed Dates -->
+          <label class="timeline-card cursor-pointer relative p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high transition-all flex flex-col justify-between" data-flex="fixed">
+            <input class="peer sr-only" name="timeline_flexibility" type="radio" value="fixed"/>
+            <div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-secondary">event_busy</span>
+                  <span class="font-headline-sm text-headline-sm text-base font-bold text-on-surface">Dates are Fixed</span>
+                </div>
+                <div class="timeline-radio w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center">
+                  <div class="w-2.5 h-2.5 rounded-full bg-transparent"></div>
+                </div>
+              </div>
+            </div>
+            <p class="font-body-sm text-body-sm text-secondary mt-2 text-xs">Event must take place strictly on the selected date. No alternate date recommendations.</p>
+            <div class="mt-4 pt-3 flex items-center gap-2 font-label-sm text-label-sm text-secondary/70">
+              <span class="material-symbols-outlined text-sm">lock</span>
+              <span>Requires strict venue confirmation</span>
+            </div>
+          </label>
+          <!-- Flexible Timeline -->
+          <label class="timeline-card cursor-pointer relative p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high transition-all flex flex-col justify-between" data-flex="flexible">
+            <input class="peer sr-only" name="timeline_flexibility" type="radio" value="flexible"/>
+            <div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-secondary">event_repeat</span>
+                  <span class="font-headline-sm text-headline-sm text-base font-bold text-on-surface">Flexible (±1–3 Days)</span>
+                </div>
+                <div class="timeline-radio w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center">
+                  <div class="w-2.5 h-2.5 rounded-full bg-transparent"></div>
+                </div>
+              </div>
+            </div>
+            <p class="font-body-sm text-body-sm text-secondary mt-2 text-xs">Open to planner date advice based on preferred venue availability, lower rates, and vendor slot discounts.</p>
+            <div class="mt-4 pt-3 flex items-center justify-between">
+              <span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-bold">
+                <span class="material-symbols-outlined text-sm">savings</span>
+                <span>Unlocks ~15% better rates</span>
+              </span>
+              <span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-primary-fixed text-[11px] font-bold">Recommended</span>
+            </div>
+          </label>
+        </div>
+        <!-- Milestone Lead-Time Visual -->
+        <div class="mt-space-lg p-space-md rounded-xl bg-surface-container">
+          <div class="flex items-center justify-between mb-2">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-xl">timer</span>
+              <span class="font-label-md text-label-md text-on-surface font-bold">Target Planning Lead Time: <span class="text-primary">6 Weeks</span></span>
+            </div>
+            <span class="font-label-sm text-label-sm text-secondary">Ideal for 250 Pax Production</span>
+          </div>
+          <div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden my-3">
+            <div class="bg-gradient-to-r from-primary via-primary-container to-tertiary-container h-full rounded-full w-[65%]"></div>
+          </div>
+          <div class="flex items-center justify-between text-[11px] font-label-sm text-secondary">
+            <span>Week 1-2: Concept &amp; Venue Lock</span>
+            <span>Week 3-4: Tech &amp; Food Tastings</span>
+            <span>Week 5-6: Rehearsals &amp; Rollout</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: Additional Notes -->
+      <section class="p-space-lg rounded-2xl bg-surface-container-low shadow-xl">
+        <div class="flex items-center justify-between mb-space-sm">
+          <div>
+            <h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Additional Notes &amp; Special Requirements</h2>
+            <p class="font-body-sm text-body-sm text-secondary mt-0.5">Specify dietary mandates, lighting specs, VIP protocols, or vendor exclusions.</p>
+          </div>
+        </div>
+        <div class="relative mt-space-sm">
+          <textarea class="w-full bg-surface-container rounded-xl p-space-md font-body-md text-body-md text-on-surface placeholder:text-secondary/50 focus:outline-none focus:ring-2 focus:ring-primary-container transition-all resize-none shadow-inner leading-relaxed" id="planner-notes" rows="5" placeholder="Specify dietary mandates, lighting specs, VIP protocols, or vendor exclusions..."></textarea>
+          <div class="flex items-center justify-between mt-2 px-1">
+            <div class="flex items-center gap-1.5 text-primary text-xs font-medium">
+              <span class="material-symbols-outlined text-[16px]">tips_and_updates</span>
+              <span>Planners respond 40% faster when special guest requirements are detailed early.</span>
+            </div>
+            <span class="font-label-sm text-label-sm text-secondary font-mono" id="planner-notes-counter">0 / 1,000</span>
+          </div>
+        </div>
+        <!-- Quick Mention Badges -->
+        <div class="mt-space-md flex flex-wrap gap-2">
+          <button class="planner-quick-tag text-xs px-2.5 py-1 rounded-lg bg-surface-container text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button">+ Add Drone Permission</button>
+          <button class="planner-quick-tag text-xs px-2.5 py-1 rounded-lg bg-surface-container text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button">+ Green Room Specs</button>
+          <button class="planner-quick-tag text-xs px-2.5 py-1 rounded-lg bg-surface-container text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button">+ Valet Parking Coordination</button>
+        </div>
+      </section>
+
+      <!-- SECTION 4: Moodboard & Attachments -->
+      <section class="p-space-lg rounded-2xl bg-surface-container-low shadow-xl">
+        <div class="flex items-center justify-between mb-space-sm">
+          <div>
+            <h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Inspiration Moodboard &amp; Attachments <span class="text-secondary text-sm font-normal">(Optional)</span></h2>
+            <p class="font-body-sm text-body-sm text-secondary mt-0.5">Share visual deck links, Pinterest boards, run-of-shows, or floorplans.</p>
+          </div>
+        </div>
+        <!-- Drag and Drop Zone -->
+        <div class="mt-space-sm p-space-xl rounded-2xl bg-surface-container/70 hover:bg-surface-container flex flex-col items-center justify-center text-center cursor-pointer transition-all group" id="drop-zone">
+          <div class="w-14 h-14 rounded-full bg-surface-container-high group-hover:bg-primary-container/20 group-hover:text-primary transition-all flex items-center justify-center text-secondary mb-3">
+            <span class="material-symbols-outlined text-3xl">cloud_upload</span>
+          </div>
+          <p class="font-label-md text-label-md text-on-surface font-bold">Click to browse or drop your inspiration files</p>
+          <p class="font-body-sm text-body-sm text-secondary mt-1">PDF Pitch decks, Pinterest export, floorplans (PNG, JPG, PDF up to 25MB)</p>
+          <div class="mt-4 flex items-center gap-3">
+            <span class="px-3 py-1 rounded-full bg-surface-container-highest text-secondary text-xs">PDF</span>
+            <span class="px-3 py-1 rounded-full bg-surface-container-highest text-secondary text-xs">PNG / JPG</span>
+            <span class="px-3 py-1 rounded-full bg-surface-container-highest text-secondary text-xs">Figma / WeTransfer link</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- RIGHT STICKY COLUMN: Live Summary Card -->
+    <aside class="lg:col-span-4 sticky top-36 flex flex-col gap-space-md">
+      <div class="p-space-lg rounded-2xl bg-surface-container-low shadow-2xl relative overflow-hidden">
+        <div class="absolute -top-10 -right-10 w-40 h-40 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+        <!-- Header -->
+        <div class="flex items-center justify-between pb-space-sm">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary-container text-xl">assignment</span>
+            <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface text-lg">Your Requirement</h3>
+          </div>
+          <div class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-950/60 text-emerald-400">
+            <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+            <span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-[10px]">Live Sync</span>
+          </div>
+        </div>
+        <!-- Snapshot Sections -->
+        <div class="flex flex-col gap-space-md mt-space-md">
+          <!-- STEP 1 SNAPSHOT -->
+          <div class="p-space-sm rounded-xl bg-surface-container">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary/70 font-bold">Step 1 • Basics</span>
+              <a class="font-label-sm text-label-sm text-primary hover:underline" href="step-1-event-basics.html">Edit</a>
+            </div>
+            <p class="font-label-md text-label-md text-on-surface font-extrabold" id="sum-event-name">—</p>
+            <div class="mt-2 flex flex-col gap-1 text-xs text-secondary font-body-sm">
+              <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-sm text-primary">groups</span>
+                <span id="sum-event-type">Corporate Gala</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-sm text-primary">calendar_today</span>
+                <span id="sum-date">—</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-sm text-primary">location_on</span>
+                <span id="sum-location">—</span>
+              </div>
+            </div>
+          </div>
+          <!-- STEP 2 SNAPSHOT -->
+          <div class="p-space-sm rounded-xl bg-surface-container">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary/70 font-bold">Step 2 • Scope</span>
+              <a class="font-label-sm text-label-sm text-primary hover:underline" href="step-2-planner-details.html">Edit</a>
+            </div>
+            <p class="font-label-md text-label-md text-on-surface font-bold" id="sum-scope">Full Planning &amp; Production</p>
+            <div class="mt-2 flex flex-col gap-1 text-xs text-secondary font-body-sm">
+              <div class="flex items-center justify-between">
+                <span>Target Budget:</span>
+                <span class="font-bold text-on-surface" id="sum-budget">—</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span>Guest Count:</span>
+                <span class="font-semibold text-on-surface" id="sum-guests">—</span>
+              </div>
+            </div>
+          </div>
+          <!-- STEP 3 ACTIVE SPECS -->
+          <div class="p-space-sm rounded-xl bg-surface-container-high ring-1 ring-primary-container/40">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Step 3 • Active Specs</span>
+              <span class="h-2 w-2 rounded-full bg-primary-container animate-pulse"></span>
+            </div>
+            <div class="mt-1 flex flex-col gap-1.5 text-xs">
+              <div class="flex items-center justify-between">
+                <span class="text-secondary">Theme:</span>
+                <span class="font-bold text-on-surface" id="sidebar-theme">—</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-secondary">Flexibility:</span>
+                <span class="font-bold text-on-surface" id="sidebar-flex">—</span>
+              </div>
+            </div>
+          </div>
+          <!-- Estimated Match Metrics -->
+          <div class="p-space-sm rounded-xl bg-surface-container-lowest">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="material-symbols-outlined text-primary-container text-lg">speed</span>
+              <span class="font-label-sm text-label-sm font-bold text-on-surface uppercase tracking-wider">Estimated Marketplace Matches</span>
+            </div>
+            <div class="flex items-center justify-between text-xs py-1">
+              <span class="text-secondary">Expected Proposals:</span>
+              <span class="font-bold text-on-surface">4–6 Verified Planners</span>
+            </div>
+            <div class="flex items-center justify-between text-xs py-1">
+              <span class="text-secondary">First Quote ETA:</span>
+              <span class="font-bold text-emerald-400">&lt; 3 Hours</span>
+            </div>
+            <div class="flex items-center justify-between text-xs py-1">
+              <span class="text-secondary">Avg. Planner Rating:</span>
+              <span class="font-bold text-primary-fixed">4.92 ★ (Verified)</span>
+            </div>
+          </div>
+          <!-- Escrow Trust Assurance -->
+          <div class="p-space-sm rounded-xl bg-surface-container/40 flex items-start gap-2.5">
+            <span class="material-symbols-outlined text-primary-container text-lg shrink-0 mt-0.5">verified_user</span>
+            <p class="text-xs text-secondary leading-relaxed"><strong class="text-on-surface">GoPratle Escrow Protection:</strong> Funds held securely until milestones are approved. Dedicated concierge included.</p>
+          </div>
+          <!-- Concierge -->
+          <div class="text-center pt-1">
+            <a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" href="javascript:void(0)" id="concierge-link">
+              <span class="material-symbols-outlined text-sm">support_agent</span>
+              <span>Need guidance? Talk to Event Concierge</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- STICKY BOTTOM ACTION BAR -->
+  <div class="mt-space-2xl p-space-md rounded-2xl bg-surface-container-lowest/95 backdrop-blur-xl sticky bottom-4 z-30 shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-space-md">
+      <a class="inline-flex items-center gap-2 px-space-lg py-space-sm rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all w-full sm:w-auto justify-center" href="step-2-planner-details.html">
+        <span class="material-symbols-outlined text-lg">arrow_back</span>
+        <span>Back: Planner Scope</span>
+      </a>
+      <!-- Center Stepper Progress -->
+      <div class="flex flex-col items-center gap-1 w-full sm:w-auto">
+        <span class="font-label-sm text-label-sm text-secondary font-semibold">Step 3 of 4 • 75% Complete</span>
+        <div class="w-48 bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+          <div class="bg-primary-container h-full w-3/4 rounded-full transition-all"></div>
+        </div>
+      </div>
+      <!-- Next / Proceed -->
+      <button class="inline-flex items-center justify-center gap-2 bg-primary-container hover:bg-[#ff723f] text-on-surface font-label-md text-label-md px-space-xl py-space-sm rounded-full shadow-[0_8px_28px_-4px_rgba(255,90,31,0.5)] transition-all transform hover:-translate-y-0.5 w-full sm:w-auto font-bold" id="next-to-review-btn" type="button">
+        <span>Next: Review &amp; Post Requirement</span>
+        <span class="material-symbols-outlined text-lg">arrow_forward</span>
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+</main>
+
+<!-- Toast Container -->
+<div id="toast-container" style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999;display:flex;flex-direction:column;gap:0.5rem;pointer-events:none;"></div>
+
+<footer class="w-full bg-surface-container-lowest border-t border-white/[0.08] mt-space-3xl">
+  <div class="max-w-[1280px] mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-3xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter-lg pb-space-2xl border-b border-white/[0.08]">
+      <div class="lg:col-span-2 flex flex-col gap-space-md pr-0 lg:pr-gutter-lg">
+        <div class="flex items-center gap-space-sm">
+          <img alt="GoPratle Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xjvc9315TLRwPfxhYRyN-phA82HhGheNGKEykP4RkY-D8g13qg3rr4PGS2yIHlPR4JhqKQlONMi3vz-z_dSCMZAc9giDq5WGZnySswFNIOQjmlrdVhtb-ZLa5wUYpio3CL5ICq127fiBmP_lPqMQ6h_tuCB832OycGyPlSaVEykYeT1LyO4FjE3uTYXQD9sG2xvlyqOschrPxxn8R_D0Rv9f3EQcLIy2Gi6WR1obB_9h8bPrQkHiMgfQ"/>
+          <span class="flex items-center gap-1 font-headline-sm text-headline-sm font-bold text-on-surface"><span>GoPratle</span><span class="h-1.5 w-1.5 rounded-full bg-primary-container inline-block"></span></span>
+        </div>
+        <p class="font-body-sm text-body-sm text-secondary max-w-sm leading-relaxed">The trusted marketplace for event professionals and unforgettable experiences.</p>
+      </div>
+      <div class="flex flex-col gap-space-sm">
+        <h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider font-bold mb-space-xs">Explore Categories</h4>
+        <nav class="flex flex-col gap-space-xs">
+          <a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" href="#">Planners</a>
+          <a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" href="#">Performers</a>
+          <a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" href="#">Crew</a>
+        </nav>
+      </div>
+      <div class="flex flex-col gap-space-sm">
+        <h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider font-bold mb-space-xs">Platform</h4>
+        <nav class="flex flex-col gap-space-xs">
+          <a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" href="#">How it Works</a>
+          <a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" href="#">For Planners</a>
+          <a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" href="#">Pricing</a>
+          <a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" href="#">Trust &amp; Safety</a>
+        </nav>
+      </div>
+      <div class="flex flex-col gap-space-sm">
+        <h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider font-bold mb-space-xs">Company</h4>
+        <nav class="flex flex-col gap-space-xs">
+          <a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" href="#">About Us</a>
+          <a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" href="#">Contact</a>
+          <a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" href="#">Privacy Policy</a>
+          <a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" href="#">Terms</a>
+        </nav>
+      </div>
+    </div>
+    <div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md text-center sm:text-left">
+      <p class="font-label-sm text-label-sm text-secondary">© 2025 GoPratle Technologies Inc. All rights reserved.</p>
+      <div class="flex items-center gap-space-lg">
+        <a class="font-label-sm text-label-sm text-secondary hover:text-on-surface transition-colors" href="#">Privacy</a>
+        <a class="font-label-sm text-label-sm text-secondary hover:text-on-surface transition-colors" href="#">Terms</a>
+        <a class="font-label-sm text-label-sm text-secondary hover:text-on-surface transition-colors" href="#">Security</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="module">
+  import { getStore, saveStore, showToast } from './js/marketplace-store.js';
+
+  window.gopratleShowToast = showToast;
+  let store = getStore();
+
+  // ─── Populate Live Summary ────────────────────────────────────────────────
+  function updateSidebar() {
+    const el = id => document.getElementById(id);
+    if (el('sum-event-name')) el('sum-event-name').textContent = store.eventName || '—';
+    if (el('sum-event-type')) el('sum-event-type').textContent = store.eventTypeName || 'Corporate Gala';
+    if (el('sum-date')) el('sum-date').textContent = (store.eventDate ? store.eventDate + (store.eventTime ? ' • ' + store.eventTime : '') : '—');
+    if (el('sum-location')) el('sum-location').textContent = store.venue ? `${store.venue} (${store.city})` : store.city || '—';
+    if (el('sum-scope')) el('sum-scope').textContent = store.plannerScope || 'Full Planning & Production';
+    if (el('sum-budget')) el('sum-budget').textContent = store.plannerBudget || '—';
+    if (el('sum-guests')) el('sum-guests').textContent = store.plannerGuestCount ? `${store.plannerGuestCount} Guests` : '—';
+  }
+
+  function updateSidebarTheme() {
+    const activeCards = document.querySelectorAll('.theme-card.selected');
+    const themes = Array.from(activeCards).map(c => c.getAttribute('data-theme'));
+    const customThemeVal = document.getElementById('custom-theme-input')?.value?.trim();
+    if (customThemeVal) themes.push(customThemeVal);
+    const sidebarTheme = document.getElementById('sidebar-theme');
+    if (sidebarTheme) sidebarTheme.textContent = themes.length ? themes.join(' & ') : '—';
+    store = saveStore({ plannerThemes: themes });
+    const badge = document.getElementById('theme-count-badge');
+    if (badge) badge.textContent = `${themes.length} Selected`;
+  }
+
+  // ─── Theme Card Selection ─────────────────────────────────────────────────
+  const themeCards = document.querySelectorAll('.theme-card');
+  const storedThemes = store.plannerThemes || [];
+  themeCards.forEach(card => {
+    const theme = card.getAttribute('data-theme');
+    const indicator = card.querySelector('.theme-indicator');
+    if (storedThemes.includes(theme)) {
+      card.classList.add('selected', 'bg-surface-container-high', 'ring-2', 'ring-primary-container', 'shadow-[0_8px_24px_-4px_rgba(255,90,31,0.3)]');
+      card.classList.remove('bg-surface-container');
+      if (indicator) indicator.className = 'theme-indicator w-4 h-4 rounded-full bg-primary-container text-on-surface flex items-center justify-center text-[10px] font-bold';
+    }
+  });
+  updateSidebarTheme();
+
+  themeCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const isSelected = card.classList.contains('selected');
+      const indicator = card.querySelector('.theme-indicator');
+      if (isSelected) {
+        card.classList.remove('selected', 'bg-surface-container-high', 'ring-2', 'ring-primary-container', 'shadow-[0_8px_24px_-4px_rgba(255,90,31,0.3)]');
+        card.classList.add('bg-surface-container');
+        if (indicator) indicator.className = 'theme-indicator w-4 h-4 rounded-full bg-surface-container-high';
+      } else {
+        card.classList.add('selected', 'bg-surface-container-high', 'ring-2', 'ring-primary-container', 'shadow-[0_8px_24px_-4px_rgba(255,90,31,0.3)]');
+        card.classList.remove('bg-surface-container');
+        if (indicator) indicator.className = 'theme-indicator w-4 h-4 rounded-full bg-primary-container text-on-surface flex items-center justify-center text-[10px] font-bold';
+      }
+      updateSidebarTheme();
+    });
+  });
+
+  // Vibe chips
+  document.querySelectorAll('.vibe-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      chip.classList.toggle('bg-primary-container/20');
+      chip.classList.toggle('text-primary-fixed');
+    });
+  });
+
+  // ─── Timeline Flexibility Selection ──────────────────────────────────────
+  const timelineCards = document.querySelectorAll('.timeline-card');
+  const sidebarFlex = document.getElementById('sidebar-flex');
+  const storedFlex = 'flexible'; // default from store (ignore for now, use flexible)
+
+  function selectTimeline(card) {
+    timelineCards.forEach(c => {
+      c.classList.remove('bg-surface-container-high', 'ring-2', 'ring-primary-container', 'shadow-[0_8px_24px_-4px_rgba(255,90,31,0.25)]');
+      c.classList.add('bg-surface-container');
+      const radio = c.querySelector('.timeline-radio');
+      if (radio) radio.innerHTML = '<div class="w-2.5 h-2.5 rounded-full bg-transparent"></div>';
+      const icon = c.querySelector('.material-symbols-outlined');
+      if (icon) icon.classList.remove('text-primary-container');
+    });
+    card.classList.add('bg-surface-container-high', 'ring-2', 'ring-primary-container', 'shadow-[0_8px_24px_-4px_rgba(255,90,31,0.25)]');
+    card.classList.remove('bg-surface-container');
+    const radio = card.querySelector('.timeline-radio');
+    if (radio) radio.innerHTML = '<div class="w-2 h-2 rounded-full bg-on-surface"></div>';
+    radio.className = 'timeline-radio w-5 h-5 rounded-full bg-primary-container flex items-center justify-center';
+    const icon = card.querySelector('.material-symbols-outlined');
+    if (icon) icon.classList.add('text-primary-container');
+    const flexVal = card.getAttribute('data-flex');
+    if (sidebarFlex) {
+      sidebarFlex.textContent = flexVal === 'flexible' ? 'Flexible (±2 Days)' : 'Fixed Dates';
+      sidebarFlex.className = flexVal === 'flexible'
+        ? 'font-bold text-emerald-400'
+        : 'font-bold text-on-surface';
+    }
+    store = saveStore({ plannerDateFlex: flexVal });
+  }
+
+  timelineCards.forEach(card => {
+    card.addEventListener('click', () => selectTimeline(card));
+  });
+  // Auto-select flexible by default
+  const defaultFlexCard = document.querySelector('.timeline-card[data-flex="flexible"]');
+  if (defaultFlexCard) selectTimeline(defaultFlexCard);
+
+  // ─── Notes + Counter ──────────────────────────────────────────────────────
+  const plannerNotes = document.getElementById('planner-notes');
+  const notesCounter = document.getElementById('planner-notes-counter');
+  if (plannerNotes) {
+    plannerNotes.value = store.plannerNotes || '';
+    if (notesCounter) notesCounter.textContent = `${plannerNotes.value.length} / 1,000`;
+    plannerNotes.addEventListener('input', () => {
+      if (notesCounter) notesCounter.textContent = `${plannerNotes.value.length} / 1,000`;
+      store = saveStore({ plannerNotes: plannerNotes.value });
+    });
+  }
+
+  // Quick tags
+  document.querySelectorAll('.planner-quick-tag').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (plannerNotes) {
+        const tagText = btn.textContent.replace(/^\+\s*/, '').trim();
+        const sep = plannerNotes.value.trim() ? '. ' : '';
+        plannerNotes.value += sep + tagText;
+        plannerNotes.dispatchEvent(new Event('input'));
+      }
+    });
+  });
+
+  // Custom theme input
+  document.getElementById('custom-theme-input')?.addEventListener('input', updateSidebarTheme);
+
+  // ─── Drop Zone ────────────────────────────────────────────────────────────
+  document.getElementById('drop-zone')?.addEventListener('click', () => {
+    showToast('File upload coming soon!', 'info');
+  });
+
+  // ─── Misc Buttons ─────────────────────────────────────────────────────────
+  document.getElementById('save-exit-btn')?.addEventListener('click', () => {
+    showToast('Progress saved! Returning to home...', 'success');
+    setTimeout(() => { window.location.href = 'index.html'; }, 600);
+  });
+  document.getElementById('concierge-link')?.addEventListener('click', () => {
+    showToast('Host Support: Concierge available 24/7 at support@gopratle.com', 'info');
+  });
+
+  // ─── Next Button (Smart Routing) ──────────────────────────────────────────
+  document.getElementById('next-to-review-btn')?.addEventListener('click', () => {
+    const activeThemes = document.querySelectorAll('.theme-card.selected');
+    if (activeThemes.length === 0) {
+      showToast('Please select at least one event theme to continue.', 'error');
+      return;
+    }
+    updateSidebarTheme();
+    sessionStorage.setItem('gopratle_step3_page', 'step-3-planner-preferences.html');
+    sessionStorage.setItem('gopratle_step2_page', 'step-2-planner-details.html');
+    showToast('Planner preferences saved! Proceeding to review...', 'success');
+    setTimeout(() => { window.location.href = 'step-4-review-publish.html'; }, 500);
+  });
+
+  // ─── Init ─────────────────────────────────────────────────────────────────
+  updateSidebar();
+</script>
+</body></html>

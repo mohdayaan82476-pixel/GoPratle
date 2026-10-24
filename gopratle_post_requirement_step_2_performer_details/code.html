@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "primary-container": "#ff5a1f",
+          "inverse-on-surface": "#2f3035",
+          "error": "#ffb4ab",
+          "secondary-fixed-dim": "#c2c6d8",
+          "surface-container-highest": "#333539",
+          "surface": "#111317",
+          "on-tertiary-container": "#501900",
+          "background": "#111317",
+          "tertiary-container": "#e07444",
+          "inverse-surface": "#e2e2e8",
+          "on-primary-container": "#541400",
+          "outline-variant": "#5b4038",
+          "primary-fixed-dim": "#ffb59e",
+          "tertiary-fixed": "#ffdbcd",
+          "on-background": "#e2e2e8",
+          "primary": "#ffb59e",
+          "on-error-container": "#ffdad6",
+          "inverse-primary": "#ae3200",
+          "on-surface": "#e2e2e8",
+          "on-secondary-fixed": "#161b28",
+          "tertiary": "#ffb598",
+          "on-tertiary-fixed": "#360f00",
+          "surface-tint": "#ffb59e",
+          "on-secondary": "#2b303e",
+          "primary-fixed": "#ffdbd0",
+          "surface-bright": "#37393e",
+          "surface-container-high": "#282a2e",
+          "secondary-container": "#424655",
+          "on-primary": "#5e1700",
+          "on-surface-variant": "#e4beb3",
+          "surface-dim": "#111317",
+          "on-tertiary-fixed-variant": "#7e2c00",
+          "surface-container": "#1e2024",
+          "on-primary-fixed": "#3a0b00",
+          "surface-container-low": "#1a1c20",
+          "on-tertiary": "#591d00",
+          "outline": "#ab897f",
+          "tertiary-fixed-dim": "#ffb598",
+          "surface-container-lowest": "#0c0e12",
+          "on-secondary-container": "#b0b5c6",
+          "on-secondary-fixed-variant": "#424655",
+          "surface-variant": "#333539",
+          "secondary-fixed": "#dee2f4",
+          "on-error": "#690005",
+          "on-primary-fixed-variant": "#852400",
+          "secondary": "#c2c6d8",
+          "error-container": "#93000a"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-2xl": "4rem",
+          "space-3xl": "6rem",
+          "margin-md": "3rem",
+          "margin": "1.5rem",
+          "space-xl": "2.5rem",
+          "gutter-sm": "1rem",
+          "margin-lg": "5rem",
+          "space-md": "1rem",
+          "gutter-lg": "2rem",
+          "gutter": "1.5rem",
+          "space-sm": "0.5rem",
+          "space-xs": "0.25rem",
+          "space-lg": "1.5rem"
+        },
+        "fontFamily": {
+          "headline-xl": [
+            "Plus Jakarta Sans"
+          ],
+          "label-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "display-hero-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "display-hero": [
+            "Plus Jakarta Sans"
+          ],
+          "label-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "badge-micro": [
+            "Plus Jakarta Sans"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-xl-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ]
+        },
+        "fontSize": {
+          "headline-xl": [
+            "48px",
+            {
+              "lineHeight": "56px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "display-hero-mobile": [
+            "38px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "800"
+            }
+          ],
+          "display-hero": [
+            "64px",
+            {
+              "lineHeight": "72px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "800"
+            }
+          ],
+          "label-md": [
+            "14px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "badge-micro": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.08em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-sm": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-xl-mobile": [
+            "32px",
+            {
+              "lineHeight": "38px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-md": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-surface"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/70 backdrop-blur-xl border-b border-white/[0.08]"><div class="h-20 max-w-[1280px] mx-auto px-margin md:px-margin-md lg:px-margin-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="GoPratle Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xjvc9315TLRwPfxhYRyN-phA82HhGheNGKEykP4RkY-D8g13qg3rr4PGS2yIHlPR4JhqKQlONMi3vz-z_dSCMZAc9giDq5WGZnySswFNIOQjmlrdVhtb-ZLa5wUYpio3CL5ICq127fiBmP_lPqMQ6h_tuCB832OycGyPlSaVEykYeT1LyO4FjE3uTYXQD9sG2xvlyqOschrPxxn8R_D0Rv9f3EQcLIy2Gi6WR1obB_9h8bPrQkHiMgfQ"/><a class="flex items-center gap-1 font-headline-md text-headline-md tracking-tight font-extrabold text-on-surface" data-path="home" href="#"><span>GoPratle</span><span class="h-2 w-2 rounded-full bg-primary-container inline-block translate-y-0.5"></span></a></div><nav class="hidden md:flex items-center gap-gutter" data-active-classes="text-on-surface font-semibold"><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="how-it-works" href="#">How it works</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="for-planners" href="#">For Planners</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="categories" href="#">Categories</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="testimonials" href="#">Testimonials</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors px-space-sm py-space-xs" data-path="sign-in" href="#">Sign In</a><a class="inline-flex items-center justify-center bg-primary-container hover:bg-[#ff723f] text-on-surface font-label-md text-label-md px-space-lg py-space-sm rounded-full shadow-[0_8px_24px_-4px_rgba(255,90,31,0.4)] transition-all transform hover:-translate-y-0.5" data-path="post-a-requirement" href="#">Post a Requirement</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Progress Tracker & Stepper Bar -->
+<section class="w-full bg-surface-container-lowest/80 backdrop-blur-xl border-b border-white/[0.06] sticky top-20 z-30">
+<div class="max-w-[1280px] mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-sm md:py-space-md">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-space-sm">
+<!-- Left Sub-nav Action & Status -->
+<div class="flex items-center justify-between md:justify-start gap-space-md">
+<a class="inline-flex items-center gap-space-xs text-secondary hover:text-on-surface font-label-md text-label-md transition-colors group" href="#">
+<span class="material-symbols-outlined text-[18px] transition-transform group-hover:-translate-x-0.5">arrow_back</span>
+<span>Back to Step 1</span>
+</a>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container text-secondary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            Draft auto-saved 2m ago
+          </span>
+</div>
+<!-- 4-Step Stepper -->
+<nav aria-label="Requirement Form Steps" class="flex items-center gap-2 sm:gap-4 overflow-x-auto pb-1 md:pb-0">
+<!-- Step 1: Completed -->
+<div class="flex items-center gap-2 group cursor-pointer opacity-85 hover:opacity-100 transition-opacity">
+<div class="w-7 h-7 rounded-full bg-surface-container-high border border-white/20 flex items-center justify-center text-primary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="font-label-md text-label-md text-secondary hidden sm:inline">1. Basics</span>
+</div>
+<div class="w-4 sm:w-8 h-[1px] bg-primary-container/40"></div>
+<!-- Step 2: Active -->
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-surface flex items-center justify-center font-label-sm text-label-sm shadow-[0_0_16px_rgba(255,90,31,0.5)] ring-2 ring-primary-container/40">
+              2
+            </div>
+<span class="font-label-md text-label-md text-on-surface font-bold whitespace-nowrap">Performer Details</span>
+</div>
+<div class="w-4 sm:w-8 h-[1px] bg-white/[0.08]"></div>
+<!-- Step 3: Inactive -->
+<div class="flex items-center gap-2 opacity-40">
+<div class="w-7 h-7 rounded-full bg-surface-container-low border border-white/[0.08] flex items-center justify-center font-label-sm text-label-sm text-secondary">
+              3
+            </div>
+<span class="font-label-md text-label-md text-secondary hidden sm:inline whitespace-nowrap">Budget &amp; Terms</span>
+</div>
+<div class="w-4 sm:w-8 h-[1px] bg-white/[0.08]"></div>
+<!-- Step 4: Inactive -->
+<div class="flex items-center gap-2 opacity-40">
+<div class="w-7 h-7 rounded-full bg-surface-container-low border border-white/[0.08] flex items-center justify-center font-label-sm text-label-sm text-secondary">
+              4
+            </div>
+<span class="font-label-md text-label-md text-secondary hidden sm:inline whitespace-nowrap">Review</span>
+</div>
+</nav>
+<!-- Save Link -->
+<div class="hidden lg:flex items-center">
+<button class="font-label-sm text-label-sm text-secondary hover:text-on-surface transition-colors inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">bookmark_border</span>
+<span>Save &amp; Exit</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Ambient Glow Behind Hero Header -->
+<div class="relative w-full overflow-hidden">
+<div class="pointer-events-none absolute top-0 left-1/4 -translate-x-1/2 w-[520px] h-[340px] rounded-full bg-primary-container/10 blur-[130px] -z-10"></div>
+<div class="pointer-events-none absolute top-40 right-10 w-[420px] h-[280px] rounded-full bg-tertiary-container/5 blur-[120px] -z-10"></div>
+<!-- Main Content Container (Two Columns) -->
+<div class="max-w-[1280px] mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-start">
+<!-- Left Column: Form Details (~65% -> 8 cols) -->
+<main class="lg:col-span-8 flex flex-col gap-space-xl">
+<!-- Step Header -->
+<div class="flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-space-xs w-fit px-space-sm py-1 rounded-full bg-primary-container/10 border border-primary-container/30 text-primary-container font-badge-micro text-badge-micro tracking-wider uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+              Step 2 of 4 • Talent Profile
+            </div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight mt-space-xs">
+              Tell us about the Performer
+            </h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl">
+              Tailor the exact performance style, musical vibe, and equipment specifications so the best verified artists can pitch accurately.
+            </p>
+</div>
+<!-- Form Module Wrapper -->
+<form class="flex flex-col gap-space-xl" id="performer-form" onsubmit="event.preventDefault();">
+<!-- Field 1: Performer Type (Single Select Cards) -->
+<div class="bg-surface-container/60 backdrop-blur-xl border border-white/[0.08] rounded-xl p-space-lg flex flex-col gap-space-md transition-colors hover:border-white/[0.14]">
+<div class="flex items-center justify-between">
+<div>
+<label class="font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-space-xs">
+                    Performer Type
+                    <span class="text-primary-container text-body-sm font-normal">*Required</span>
+</label>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">Select the primary entertainer discipline needed for this gig.</p>
+</div>
+<span class="material-symbols-outlined text-secondary opacity-60">nightlife</span>
+</div>
+<!-- Options Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-space-sm pt-space-xs" id="performer-type-group">
+<!-- Selected: DJ -->
+<button class="type-chip relative group flex flex-col items-start gap-space-xs p-space-md rounded-xl text-left transition-all duration-200 bg-primary-container/15 border-2 border-primary-container shadow-[0_8px_24px_-8px_rgba(255,90,31,0.35)]" data-type="DJ" type="button">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">album</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface block font-bold">DJ</span>
+<span class="font-label-sm text-label-sm text-primary">Open-format &amp; Club</span>
+</div>
+<span class="selected-indicator absolute top-3 right-3 w-5 h-5 rounded-full bg-primary-container text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[13px] font-bold">check</span>
+</span>
+</button>
+<!-- Singer / Vocalist -->
+<button class="type-chip relative group flex flex-col items-start gap-space-xs p-space-md rounded-xl text-left transition-all duration-200 bg-surface-container-low/70 border border-white/[0.08] hover:border-white/20 hover:bg-surface-container-high/60" data-type="Singer / Vocalist" type="button">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest text-secondary group-hover:text-on-surface flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface block font-semibold">Singer / Vocalist</span>
+<span class="font-label-sm text-label-sm text-secondary">Solo / Acoustic</span>
+</div>
+<span class="selected-indicator hidden absolute top-3 right-3 w-5 h-5 rounded-full bg-primary-container text-on-surface items-center justify-center">
+<span class="material-symbols-outlined text-[13px] font-bold">check</span>
+</span>
+</button>
+<!-- Live Band -->
+<button class="type-chip relative group flex flex-col items-start gap-space-xs p-space-md rounded-xl text-left transition-all duration-200 bg-surface-container-low/70 border border-white/[0.08] hover:border-white/20 hover:bg-surface-container-high/60" data-type="Live Band" type="button">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest text-secondary group-hover:text-on-surface flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface block font-semibold">Live Band</span>
+<span class="font-label-sm text-label-sm text-secondary">3-7 Piece Group</span>
+</div>
+<span class="selected-indicator hidden absolute top-3 right-3 w-5 h-5 rounded-full bg-primary-container text-on-surface items-center justify-center">
+<span class="material-symbols-outlined text-[13px] font-bold">check</span>
+</span>
+</button>
+<!-- MC / Host -->
+<button class="type-chip relative group flex flex-col items-start gap-space-xs p-space-md rounded-xl text-left transition-all duration-200 bg-surface-container-low/70 border border-white/[0.08] hover:border-white/20 hover:bg-surface-container-high/60" data-type="MC / Host" type="button">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest text-secondary group-hover:text-on-surface flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">record_voice_over</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface block font-semibold">MC / Host</span>
+<span class="font-label-sm text-label-sm text-secondary">Emcee &amp; Protocol</span>
+</div>
+<span class="selected-indicator hidden absolute top-3 right-3 w-5 h-5 rounded-full bg-primary-container text-on-surface items-center justify-center">
+<span class="material-symbols-outlined text-[13px] font-bold">check</span>
+</span>
+</button>
+<!-- Dancer / Troupe -->
+<button class="type-chip relative group flex flex-col items-start gap-space-xs p-space-md rounded-xl text-left transition-all duration-200 bg-surface-container-low/70 border border-white/[0.08] hover:border-white/20 hover:bg-surface-container-high/60" data-type="Dancer / Troupe" type="button">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest text-secondary group-hover:text-on-surface flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">sports_kabaddi</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface block font-semibold">Dancer / Troupe</span>
+<span class="font-label-sm text-label-sm text-secondary">Choreographed</span>
+</div>
+<span class="selected-indicator hidden absolute top-3 right-3 w-5 h-5 rounded-full bg-primary-container text-on-surface items-center justify-center">
+<span class="material-symbols-outlined text-[13px] font-bold">check</span>
+</span>
+</button>
+<!-- Other -->
+<button class="type-chip relative group flex flex-col items-start gap-space-xs p-space-md rounded-xl text-left transition-all duration-200 bg-surface-container-low/70 border border-white/[0.08] hover:border-white/20 hover:bg-surface-container-high/60" data-type="Specialty Artist" type="button">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest text-secondary group-hover:text-on-surface flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">magic_button</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface block font-semibold">Other Act</span>
+<span class="font-label-sm text-label-sm text-secondary">Magician, Aerialist</span>
+</div>
+<span class="selected-indicator hidden absolute top-3 right-3 w-5 h-5 rounded-full bg-primary-container text-on-surface items-center justify-center">
+<span class="material-symbols-outlined text-[13px] font-bold">check</span>
+</span>
+</button>
+</div>
+</div>
+<!-- Field 2: Music Genre / Style (Multi-select Chips) -->
+<div class="bg-surface-container/60 backdrop-blur-xl border border-white/[0.08] rounded-xl p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-space-xs">
+<div>
+<label class="font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-space-xs">
+                    Music Genre &amp; Style
+                    <span class="text-primary-container text-body-sm font-normal">*Multi-select</span>
+</label>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">Select all musical directions that match your corporate evening vibe.</p>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-medium" id="selected-genre-count">2 genres selected</span>
+</div>
+<!-- Pill Multi-Select -->
+<div class="flex flex-wrap gap-2.5 pt-space-xs" id="genre-container">
+<!-- Pill: Electronic / EDM -->
+<button class="genre-pill px-4 py-2 rounded-full font-label-md text-label-md transition-all duration-150 border border-white/10 bg-surface-container-low text-secondary hover:text-on-surface hover:border-white/25" data-genre="Electronic / EDM" type="button">
+                  + Electronic / EDM
+                </button>
+<!-- Pill: Commercial & Bollywood (Selected) -->
+<button class="genre-pill active-genre px-4 py-2 rounded-full font-label-md text-label-md transition-all duration-150 border border-primary-container bg-primary-container/20 text-on-surface font-semibold shadow-[0_2px_12px_rgba(255,90,31,0.2)]" data-genre="Commercial &amp; Bollywood" type="button">
+                  ✓ Commercial &amp; Bollywood
+                </button>
+<!-- Pill: Hip-Hop / R&B -->
+<button class="genre-pill px-4 py-2 rounded-full font-label-md text-label-md transition-all duration-150 border border-white/10 bg-surface-container-low text-secondary hover:text-on-surface hover:border-white/25" data-genre="Hip-Hop / R&amp;B" type="button">
+                  + Hip-Hop / R&amp;B
+                </button>
+<!-- Pill: Pop Hits (Selected) -->
+<button class="genre-pill active-genre px-4 py-2 rounded-full font-label-md text-label-md transition-all duration-150 border border-primary-container bg-primary-container/20 text-on-surface font-semibold shadow-[0_2px_12px_rgba(255,90,31,0.2)]" data-genre="Pop Hits" type="button">
+                  ✓ Pop Hits
+                </button>
+<!-- Pill: Acoustic / Soul -->
+<button class="genre-pill px-4 py-2 rounded-full font-label-md text-label-md transition-all duration-150 border border-white/10 bg-surface-container-low text-secondary hover:text-on-surface hover:border-white/25" data-genre="Acoustic / Soul" type="button">
+                  + Acoustic / Soul
+                </button>
+<!-- Pill: Jazz & Blues -->
+<button class="genre-pill px-4 py-2 rounded-full font-label-md text-label-md transition-all duration-150 border border-white/10 bg-surface-container-low text-secondary hover:text-on-surface hover:border-white/25" data-genre="Jazz &amp; Blues" type="button">
+                  + Jazz &amp; Blues
+                </button>
+<!-- Pill: Rock / Indie -->
+<button class="genre-pill px-4 py-2 rounded-full font-label-md text-label-md transition-all duration-150 border border-white/10 bg-surface-container-low text-secondary hover:text-on-surface hover:border-white/25" data-genre="Rock / Indie" type="button">
+                  + Rock / Indie
+                </button>
+<!-- Pill: Classical / Instrumental -->
+<button class="genre-pill px-4 py-2 rounded-full font-label-md text-label-md transition-all duration-150 border border-white/10 bg-surface-container-low text-secondary hover:text-on-surface hover:border-white/25" data-genre="Classical / Instrumental" type="button">
+                  + Classical / Instrumental
+                </button>
+<!-- Pill: Retro 80s/90s -->
+<button class="genre-pill px-4 py-2 rounded-full font-label-md text-label-md transition-all duration-150 border border-white/10 bg-surface-container-low text-secondary hover:text-on-surface hover:border-white/25" data-genre="Retro 80s/90s" type="button">
+                  + Retro 80s/90s
+                </button>
+</div>
+<!-- Context tip -->
+<div class="flex items-center gap-space-xs text-secondary/80 font-body-sm text-body-sm mt-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">info</span>
+<span>Performers will prepare their playlist and setlists according to these selections.</span>
+</div>
+</div>
+<!-- Field 3 & 4: Performance Duration & Lineup Count (Side-by-side on tablet/desktop) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Field 3: Performance Duration (Custom Slider) (7 cols) -->
+<div class="md:col-span-7 bg-surface-container/60 backdrop-blur-xl border border-white/[0.08] rounded-xl p-space-lg flex flex-col justify-between gap-space-md">
+<div>
+<div class="flex items-start justify-between">
+<div>
+<label class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+                        Performance Duration
+                      </label>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">Continuous set or scheduled intervals</p>
+</div>
+<span class="material-symbols-outlined text-secondary opacity-60">timer</span>
+</div>
+<!-- Dynamic Output Display -->
+<div class="flex items-baseline gap-space-sm mt-space-md">
+<span class="font-display-hero-mobile text-display-hero-mobile font-extrabold text-primary-container leading-none" id="duration-display">3</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Hours Set</span>
+</div>
+<div class="inline-flex items-center gap-1.5 mt-2 px-space-sm py-1 rounded-md bg-surface-container-high border border-white/[0.06] text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+<span id="duration-recommendation">Recommended for 150–300 guest gala &amp; party</span>
+</div>
+</div>
+<!-- Custom Range Slider Component -->
+<div class="flex flex-col gap-2 pt-space-sm">
+<div class="relative w-full flex items-center">
+<input class="w-full h-2.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-[#ff5a1f] focus:outline-none focus:ring-2 focus:ring-primary-container/40" id="duration-slider" max="8" min="1" step="1" type="range" value="3"/>
+</div>
+<!-- Tick mark labels -->
+<div class="flex justify-between text-secondary font-label-sm text-label-sm px-1">
+<span class="hover:text-on-surface cursor-pointer" onclick="updateDuration(1)">1h</span>
+<span class="hover:text-on-surface cursor-pointer" onclick="updateDuration(2)">2h</span>
+<span class="text-primary-container font-bold cursor-pointer" onclick="updateDuration(3)">3h</span>
+<span class="hover:text-on-surface cursor-pointer" onclick="updateDuration(4)">4h</span>
+<span class="hover:text-on-surface cursor-pointer" onclick="updateDuration(5)">5h</span>
+<span class="hover:text-on-surface cursor-pointer" onclick="updateDuration(6)">6h</span>
+<span class="hover:text-on-surface cursor-pointer" onclick="updateDuration(7)">7h</span>
+<span class="hover:text-on-surface cursor-pointer" onclick="updateDuration(8)">8h</span>
+</div>
+</div>
+</div>
+<!-- Field 4: Number of Performers Needed (Stepper) (5 cols) -->
+<div class="md:col-span-5 bg-surface-container/60 backdrop-blur-xl border border-white/[0.08] rounded-xl p-space-lg flex flex-col justify-between gap-space-md">
+<div>
+<div class="flex items-start justify-between">
+<div>
+<label class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+                        Artist Lineup
+                      </label>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">Total people performing on stage</p>
+</div>
+<span class="material-symbols-outlined text-secondary opacity-60">person_add</span>
+</div>
+<p class="font-label-sm text-label-sm text-secondary mt-space-sm" id="lineup-label-sub">
+                    Lead DJ + Live Percussionist / Hybrid Duo
+                  </p>
+</div>
+<!-- Modern Stepper Unit -->
+<div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low border border-white/[0.08] mt-2">
+<button class="w-12 h-12 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface flex items-center justify-center transition-colors active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" id="btn-decrement" type="button">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<div class="flex flex-col items-center">
+<span class="font-headline-xl-mobile text-headline-xl-mobile font-bold text-on-surface" id="performer-count-display">2</span>
+<span class="font-badge-micro text-badge-micro text-secondary tracking-widest uppercase">Performers</span>
+</div>
+<button class="w-12 h-12 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface flex items-center justify-center transition-colors active:scale-95" id="btn-increment" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<div class="text-secondary/70 font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lightbulb</span>
+<span>Solos, Duos, or 5-piece ensembles</span>
+</div>
+</div>
+</div>
+<!-- Field 5: Equipment & Sound Setup (Selection Radio Cards) -->
+<div class="bg-surface-container/60 backdrop-blur-xl border border-white/[0.08] rounded-xl p-space-lg flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div>
+<label class="font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-space-xs">
+                    Sound, Lighting &amp; DJ Console Setup
+                  </label>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">Clarify who provides mixers, monitors, PA, and microphones.</p>
+</div>
+<span class="material-symbols-outlined text-secondary opacity-60">speaker</span>
+</div>
+<!-- Radio Option 1 (Selected) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm pt-space-xs" id="equipment-group">
+<label class="equipment-card relative flex items-start gap-space-md p-space-md rounded-xl cursor-pointer bg-primary-container/10 border-2 border-primary-container transition-all">
+<input checked="" class="sr-only" name="equipment" type="radio" value="performer_brings"/>
+<div class="w-5 h-5 rounded-full border-2 border-primary-container flex items-center justify-center mt-0.5 shrink-0 radio-circle">
+<div class="w-2.5 h-2.5 rounded-full bg-primary-container"></div>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-on-surface font-bold">Performer Brings Full Audio Rig</span>
+<span class="font-body-sm text-body-sm text-secondary">
+                      Artist supplies controller, 2x PA speakers, cordless wireless mic, and basic ambient lighting.
+                    </span>
+<span class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm mt-1">
+<span class="material-symbols-outlined text-[14px]">tune</span> Turnkey • Plug-and-play setup
+                    </span>
+</div>
+</label>
+<!-- Radio Option 2 -->
+<label class="equipment-card relative flex items-start gap-space-md p-space-md rounded-xl cursor-pointer bg-surface-container-low/70 border border-white/[0.08] hover:border-white/20 hover:bg-surface-container-high/40 transition-all">
+<input class="sr-only" name="equipment" type="radio" value="venue_provides"/>
+<div class="w-5 h-5 rounded-full border border-white/30 flex items-center justify-center mt-0.5 shrink-0 radio-circle">
+<div class="w-2.5 h-2.5 rounded-full bg-transparent"></div>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Venue Already Provides In-House Sound</span>
+<span class="font-body-sm text-body-sm text-secondary">
+                      Venue audio-visual crew handles line arrays, stage monitors, and power. Performer only brings USB/instruments.
+                    </span>
+<span class="inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm mt-1">
+<span class="material-symbols-outlined text-[14px]">stadium</span> XLR patch-in only
+                    </span>
+</div>
+</label>
+</div>
+</div>
+<!-- Navigation Action Bottom Bar -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-md pb-space-lg border-t border-white/[0.08]">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-space-lg py-3 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all border border-white/[0.08] group" href="#">
+<span class="material-symbols-outlined text-[18px] transition-transform group-hover:-translate-x-1">west</span>
+<span>Back: Event Basics</span>
+</a>
+<div class="flex flex-col sm:flex-row items-center gap-space-md w-full sm:w-auto">
+<span class="font-label-sm text-label-sm text-secondary text-center sm:text-right hidden md:inline">
+                  You can edit all inputs in Step 4
+                </span>
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-space-xl py-3.5 rounded-full bg-primary-container hover:bg-[#ff723f] text-on-surface font-label-md text-label-md font-bold shadow-[0_12px_32px_-4px_rgba(255,90,31,0.45)] transition-all transform hover:-translate-y-0.5 active:translate-y-0 group" type="submit">
+<span>Next: Preferences &amp; Budget</span>
+<span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">east</span>
+</button>
+</div>
+</div>
+</form>
+</main>
+<!-- Right Column: Sticky Live Requirement Summary (~35% -> 4 cols) -->
+<aside class="lg:col-span-4 w-full">
+<div class="sticky top-40 flex flex-col gap-space-md">
+<!-- Summary Glass Card -->
+<div class="rounded-xl bg-surface-container-low/90 backdrop-blur-2xl border border-white/[0.1] shadow-2xl p-space-lg flex flex-col gap-space-md overflow-hidden relative">
+<!-- Subtle decorative corner lighting -->
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-primary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Header & Status -->
+<div class="flex items-center justify-between pb-space-sm border-b border-white/[0.08]">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">assignment</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Your Requirement</h2>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 font-label-sm text-[11px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  Live Sync
+                </span>
+</div>
+<!-- Section 1: Previous Step 1 Retained Snapshot -->
+<div class="flex flex-col gap-2 p-3 rounded-lg bg-surface-container/60 border border-white/[0.04]">
+<div class="flex items-center justify-between">
+<span class="font-badge-micro text-badge-micro text-secondary uppercase tracking-wider">Step 1 Snapshot</span>
+<a class="font-label-sm text-label-sm text-primary hover:underline" href="#">Edit</a>
+</div>
+<h3 class="font-label-md text-label-md text-on-surface font-bold truncate">Tech Nexus Annual Gala 2025</h3>
+<div class="flex flex-col gap-1 text-secondary font-label-sm text-label-sm pt-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-outline">apartment</span>
+<span>Corporate Evening Gala (250 Pax)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-outline">calendar_month</span>
+<span>Oct 24, 2025 • 7:00 PM</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-outline">location_on</span>
+<span>San Francisco, CA (Grand Hyatt)</span>
+</div>
+</div>
+</div>
+<!-- Section 2: Real-time Updated Step 2 Specs -->
+<div class="flex flex-col gap-space-sm">
+<span class="font-badge-micro text-badge-micro text-primary uppercase tracking-wider font-bold">
+                  Step 2 • Active Specifications
+                </span>
+<dl class="flex flex-col gap-2.5 font-label-sm text-label-sm">
+<!-- Selected Talent -->
+<div class="flex items-center justify-between py-1 border-b border-white/[0.04]">
+<dt class="text-secondary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">music_note</span>
+<span>Category</span>
+</dt>
+<dd class="font-bold text-on-surface bg-primary-container/20 text-primary-container px-2 py-0.5 rounded" id="sum-performer-type">
+                      DJ
+                    </dd>
+</div>
+<!-- Selected Genres -->
+<div class="flex items-start justify-between py-1 border-b border-white/[0.04]">
+<dt class="text-secondary flex items-center gap-1.5 pt-0.5">
+<span class="material-symbols-outlined text-[16px] text-outline">queue_music</span>
+<span>Vibe / Genres</span>
+</dt>
+<dd class="font-medium text-on-surface text-right max-w-[170px]" id="sum-genres">
+                      Commercial &amp; Bollywood, Pop Hits
+                    </dd>
+</div>
+<!-- Set Length -->
+<div class="flex items-center justify-between py-1 border-b border-white/[0.04]">
+<dt class="text-secondary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+<span>Duration</span>
+</dt>
+<dd class="font-semibold text-on-surface" id="sum-duration">
+                      3 Hours Continuous
+                    </dd>
+</div>
+<!-- Lineup Size -->
+<div class="flex items-center justify-between py-1 border-b border-white/[0.04]">
+<dt class="text-secondary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">group</span>
+<span>Lineup Size</span>
+</dt>
+<dd class="font-semibold text-on-surface" id="sum-lineup">
+                      2 Artists (Duo)
+                    </dd>
+</div>
+<!-- Audio Gear -->
+<div class="flex items-start justify-between py-1 border-b border-white/[0.04]">
+<dt class="text-secondary flex items-center gap-1.5 pt-0.5">
+<span class="material-symbols-outlined text-[16px] text-outline">speaker_group</span>
+<span>Audio &amp; PA</span>
+</dt>
+<dd class="font-medium text-on-surface text-right max-w-[170px]" id="sum-equipment">
+                      Performer Supplies PA &amp; Console
+                    </dd>
+</div>
+</dl>
+</div>
+<!-- Estimated Market Benchmark Card -->
+<div class="p-space-md rounded-xl bg-gradient-to-br from-surface-container-high to-surface-container border border-primary-container/20 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Estimated Market Range</span>
+<span class="material-symbols-outlined text-primary text-[16px]">trending_up</span>
+</div>
+<div class="font-headline-md text-headline-md font-extrabold text-on-surface tracking-tight" id="sum-budget-estimate">
+                  $1,800 – $3,200
+                </div>
+<p class="font-label-sm text-[12px] text-secondary leading-snug">
+                  Typical rate for a top-rated 3h DJ duo in SF Bay Area with full equipment.
+                </p>
+</div>
+<!-- Trust Guarantee Callout -->
+<div class="flex items-center gap-space-sm pt-1 text-secondary font-label-sm text-label-sm">
+<div class="w-6 h-6 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+</div>
+<span>Guaranteed <strong>3+ verified pitches</strong> within 4 hours of posting.</span>
+</div>
+</div>
+<!-- Helpful Need Assistance Pill -->
+<div class="p-3 rounded-lg bg-surface-container/40 border border-white/[0.06] flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">headset_mic</span>
+                Need curator assistance?
+              </span>
+<a class="text-primary hover:underline font-semibold" href="#">Talk to Event Concierge</a>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Dynamic State Controller for Step 2 Form
+  (function initStep2Form() {
+    let currentPerformerType = "DJ";
+    let selectedGenres = ["Commercial & Bollywood", "Pop Hits"];
+    let durationHours = 3;
+    let performerCount = 2;
+    let equipmentOption = "Performer Supplies PA & Console";
+
+    // DOM references
+    const sumType = document.getElementById("sum-performer-type");
+    const sumGenres = document.getElementById("sum-genres");
+    const sumDuration = document.getElementById("sum-duration");
+    const sumLineup = document.getElementById("sum-lineup");
+    const sumEquipment = document.getElementById("sum-equipment");
+    const sumBudget = document.getElementById("sum-budget-estimate");
+
+    const genreCountText = document.getElementById("selected-genre-count");
+    const durationDisplay = document.getElementById("duration-display");
+    const durationSlider = document.getElementById("duration-slider");
+    const durationRecom = document.getElementById("duration-recommendation");
+    const countDisplay = document.getElementById("performer-count-display");
+    const lineupSub = document.getElementById("lineup-label-sub");
+
+    // 1. Performer Type Selection
+    const typeButtons = document.querySelectorAll(".type-chip");
+    typeButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        typeButtons.forEach(b => {
+          b.classList.remove("border-2", "border-primary-container", "bg-primary-container/15", "shadow-[0_8px_24px_-8px_rgba(255,90,31,0.35)]");
+          b.classList.add("bg-surface-container-low/70", "border", "border-white/[0.08]");
+          const check = b.querySelector(".selected-indicator");
+          if (check) check.classList.add("hidden");
+        });
+
+        btn.classList.add("border-2", "border-primary-container", "bg-primary-container/15", "shadow-[0_8px_24px_-8px_rgba(255,90,31,0.35)]");
+        btn.classList.remove("bg-surface-container-low/70", "border-white/[0.08]");
+        const currentCheck = btn.querySelector(".selected-indicator");
+        if (currentCheck) currentCheck.classList.remove("hidden");
+
+        currentPerformerType = btn.getAttribute("data-type") || "Performer";
+        sumType.textContent = currentPerformerType;
+        recalculateEstimate();
+      });
+    });
+
+    // 2. Genre Chips Multi-Select
+    const genreButtons = document.querySelectorAll(".genre-pill");
+    genreButtons.forEach(pill => {
+      pill.addEventListener("click", () => {
+        const genreName = pill.getAttribute("data-genre");
+        const isSelected = selectedGenres.includes(genreName);
+
+        if (isSelected) {
+          // Deselect
+          if (selectedGenres.length > 1) { // Keep at least one
+            selectedGenres = selectedGenres.filter(g => g !== genreName);
+            pill.classList.remove("active-genre", "border-primary-container", "bg-primary-container/20", "text-on-surface", "font-semibold", "shadow-[0_2px_12px_rgba(255,90,31,0.2)]");
+            pill.classList.add("bg-surface-container-low", "text-secondary", "border-white/10");
+            pill.textContent = "+ " + genreName;
+          }
+        } else {
+          // Select
+          selectedGenres.push(genreName);
+          pill.classList.add("active-genre", "border-primary-container", "bg-primary-container/20", "text-on-surface", "font-semibold", "shadow-[0_2px_12px_rgba(255,90,31,0.2)]");
+          pill.classList.remove("bg-surface-container-low", "text-secondary", "border-white/10");
+          pill.textContent = "✓ " + genreName;
+        }
+
+        genreCountText.textContent = `${selectedGenres.length} genre${selectedGenres.length > 1 ? 's' : ''} selected`;
+        sumGenres.textContent = selectedGenres.join(", ");
+      });
+    });
+
+    // 3. Slider Interaction
+    window.updateDuration = function(val) {
+      durationHours = parseInt(val, 10);
+      durationSlider.value = durationHours;
+      durationDisplay.textContent = durationHours;
+      sumDuration.textContent = `${durationHours} Hours Continuous`;
+
+      if (durationHours <= 2) {
+        durationRecom.textContent = "Ideal for cocktail hour or opening prelude";
+      } else if (durationHours <= 4) {
+        durationRecom.textContent = "Recommended for 150–300 guest gala & party";
+      } else {
+        durationRecom.textContent = "Full evening festival or marathon set";
+      }
+      recalculateEstimate();
+    };
+
+    durationSlider.addEventListener("input", (e) => {
+      window.updateDuration(e.target.value);
+    });
+
+    // 4. Stepper Buttons
+    const btnDec = document.getElementById("btn-decrement");
+    const btnInc = document.getElementById("btn-increment");
+
+    btnDec.addEventListener("click", () => {
+      if (performerCount > 1) {
+        performerCount--;
+        updateCountDisplay();
+      }
+    });
+
+    btnInc.addEventListener("click", () => {
+      if (performerCount < 10) {
+        performerCount++;
+        updateCountDisplay();
+      }
+    });
+
+    function updateCountDisplay() {
+      countDisplay.textContent = performerCount;
+      if (performerCount === 1) {
+        lineupSub.textContent = "Solo Performance Artist";
+        sumLineup.textContent = "1 Artist (Solo)";
+      } else if (performerCount === 2) {
+        lineupSub.textContent = "Lead DJ + Live Percussionist / Hybrid Duo";
+        sumLineup.textContent = "2 Artists (Duo)";
+      } else if (performerCount <= 4) {
+        lineupSub.textContent = `${performerCount}-Piece Feature Ensemble`;
+        sumLineup.textContent = `${performerCount} Performers (Small Group)`;
+      } else {
+        lineupSub.textContent = `Full ${performerCount}-Piece Orchestra or Stage Troupe`;
+        sumLineup.textContent = `${performerCount} Performers (Full Troupe)`;
+      }
+      btnDec.disabled = (performerCount <= 1);
+      recalculateEstimate();
+    }
+
+    // 5. Equipment selection
+    const equipCards = document.querySelectorAll(".equipment-card");
+    equipCards.forEach(card => {
+      card.addEventListener("click", () => {
+        equipCards.forEach(c => {
+          c.classList.remove("border-2", "border-primary-container", "bg-primary-container/10");
+          c.classList.add("border-white/[0.08]", "bg-surface-container-low/70");
+          const dot = c.querySelector(".radio-circle div");
+          const ring = c.querySelector(".radio-circle");
+          if (dot) dot.classList.replace("bg-primary-container", "bg-transparent");
+          if (ring) {
+            ring.classList.remove("border-primary-container");
+            ring.classList.add("border-white/30");
+          }
+        });
+
+        card.classList.add("border-2", "border-primary-container", "bg-primary-container/10");
+        card.classList.remove("border-white/[0.08]", "bg-surface-container-low/70");
+        const activeDot = card.querySelector(".radio-circle div");
+        const activeRing = card.querySelector(".radio-circle");
+        if (activeDot) activeDot.classList.replace("bg-transparent", "bg-primary-container");
+        if (activeRing) {
+          activeRing.classList.add("border-primary-container");
+          activeRing.classList.remove("border-white/30");
+        }
+
+        const radioInput = card.querySelector("input[type=radio]");
+        if (radioInput.value === "performer_brings") {
+          equipmentOption = "Performer Supplies PA & Console";
+        } else {
+          equipmentOption = "Venue Sound Provided";
+        }
+        sumEquipment.textContent = equipmentOption;
+        recalculateEstimate();
+      });
+    });
+
+    // 6. Dynamic Budget Benchmarker
+    function recalculateEstimate() {
+      let baseRatePerHour = 300;
+      if (currentPerformerType === "Live Band") baseRatePerHour = 650;
+      if (currentPerformerType === "MC / Host") baseRatePerHour = 250;
+      if (currentPerformerType === "Dancer / Troupe") baseRatePerHour = 400;
+
+      const perPersonMultiplier = performerCount * 0.75 + 0.25;
+      const equipAddon = equipmentOption.includes("Supplies") ? 450 : 0;
+      
+      const low = Math.round((baseRatePerHour * durationHours * perPersonMultiplier + equipAddon) / 50) * 50;
+      const high = Math.round((low * 1.65) / 50) * 50;
+
+      sumBudget.textContent = `$${low.toLocaleString()} – $${high.toLocaleString()}`;
+    }
+  })();
+</script></main><footer class="w-full bg-surface-container-lowest border-t border-white/[0.08] mt-space-3xl"><div class="max-w-[1280px] mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-3xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter-lg pb-space-2xl border-b border-white/[0.08]"><div class="lg:col-span-2 flex flex-col gap-space-md pr-0 lg:pr-gutter-lg"><div class="flex items-center gap-space-sm"><img alt="GoPratle Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xjvc9315TLRwPfxhYRyN-phA82HhGheNGKEykP4RkY-D8g13qg3rr4PGS2yIHlPR4JhqKQlONMi3vz-z_dSCMZAc9giDq5WGZnySswFNIOQjmlrdVhtb-ZLa5wUYpio3CL5ICq127fiBmP_lPqMQ6h_tuCB832OycGyPlSaVEykYeT1LyO4FjE3uTYXQD9sG2xvlyqOschrPxxn8R_D0Rv9f3EQcLIy2Gi6WR1obB_9h8bPrQkHiMgfQ"/><span class="flex items-center gap-1 font-headline-sm text-headline-sm font-bold text-on-surface"><span>GoPratle</span><span class="h-1.5 w-1.5 rounded-full bg-primary-container inline-block"></span></span></div><p class="font-body-sm text-body-sm text-secondary max-w-sm leading-relaxed">The trusted marketplace for event professionals and unforgettable experiences.</p></div><div class="flex flex-col gap-space-sm"><h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider font-bold mb-space-xs">Explore Categories</h4><nav class="flex flex-col gap-space-xs" data-active-classes="text-on-surface"><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="planners" href="#">Planners</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="performers" href="#">Performers</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="crew" href="#">Crew</a></nav></div><div class="flex flex-col gap-space-sm"><h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider font-bold mb-space-xs">Platform</h4><nav class="flex flex-col gap-space-xs" data-active-classes="text-on-surface"><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="how-it-works" href="#">How it Works</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="for-planners" href="#">For Planners</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="pricing" href="#">Pricing</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="trust-safety" href="#">Trust &amp; Safety</a></nav></div><div class="flex flex-col gap-space-sm"><h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider font-bold mb-space-xs">Company</h4><nav class="flex flex-col gap-space-xs" data-active-classes="text-on-surface"><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="about-us" href="#">About Us</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="terms" href="#">Terms</a></nav></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md text-center sm:text-left"><p class="font-label-sm text-label-sm text-secondary">© 2025 GoPratle Technologies Inc. All rights reserved.</p><div class="flex items-center gap-space-lg"><a class="font-label-sm text-label-sm text-secondary hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy</a><a class="font-label-sm text-label-sm text-secondary hover:text-on-surface transition-colors" data-path="terms" href="#">Terms</a><a class="font-label-sm text-label-sm text-secondary hover:text-on-surface transition-colors" data-path="trust-safety" href="#">Security</a></div></div></div></footer></body></html>

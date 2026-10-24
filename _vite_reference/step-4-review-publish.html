@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Step 4: Review &amp; Publish - GoPratle</title>
+<meta name="description" content="Review your event requirement and publish to GoPratle marketplace."/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}}
+::-webkit-scrollbar{display:none;}
+#toast-container{position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999;display:flex;flex-direction:column;gap:.5rem;}
+.toast{display:flex;align-items:center;gap:.75rem;padding:.875rem 1.25rem;background:rgba(30,32,36,.96);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.1);border-radius:14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;color:#e2e2e8;min-width:260px;max-width:380px;animation:slideUp .35s cubic-bezier(.16,1,.3,1) both;}
+.toast.fade-out{animation:fadeOut .3s ease both;}
+.toast-icon{font-family:'Material Symbols Outlined';font-size:18px;}
+.toast.success .toast-icon{color:#4ade80;}
+.toast.error .toast-icon{color:#f87171;}
+.toast.info .toast-icon{color:#60a5fa;}
+@keyframes slideUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeOut{from{opacity:1}to{opacity:0;transform:translateY(-8px)}}
+#success-modal{position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.72);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s ease;}
+#success-modal.active{opacity:1;pointer-events:all;}
+#success-modal-card{background:#1e2024;border:1px solid rgba(255,90,31,.3);border-radius:24px;padding:3rem 2.5rem;max-width:520px;width:90%;text-align:center;box-shadow:0 32px 80px -16px rgba(255,90,31,.2);transform:translateY(32px) scale(.96);transition:transform .4s cubic-bezier(.16,1,.3,1);}
+#success-modal.active #success-modal-card{transform:translateY(0) scale(1);}
+.ring-icon{width:80px;height:80px;border-radius:50%;background:rgba(255,90,31,.12);border:2px solid rgba(255,90,31,.4);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;animation:pulseRing 2s ease infinite;}
+@keyframes pulseRing{0%,100%{box-shadow:0 0 0 0 rgba(255,90,31,.4)}50%{box-shadow:0 0 0 16px rgba(255,90,31,0)}}
+.edit-btn{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:600;letter-spacing:.04em;color:#ffb59e;padding:4px 10px;border-radius:9999px;background:rgba(255,90,31,.1);border:1px solid rgba(255,90,31,.2);transition:all .2s ease;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;text-decoration:none;}
+.edit-btn:hover{background:rgba(255,90,31,.2);border-color:rgba(255,90,31,.4);}
+.review-row{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;padding:.875rem 0;border-bottom:1px solid rgba(255,255,255,.05);}
+.review-row:last-child{border-bottom:none;padding-bottom:0;}
+.review-row:first-child{padding-top:0;}
+.review-label{font-size:12px;font-weight:600;letter-spacing:.04em;color:#c2c6d8;text-transform:uppercase;flex-shrink:0;min-width:120px;padding-top:2px;font-family:'Plus Jakarta Sans',sans-serif;}
+.review-value{font-size:14px;font-weight:500;color:#e2e2e8;text-align:right;font-family:'Plus Jakarta Sans',sans-serif;}
+.review-value.hl{color:#ffb59e;font-weight:700;}
+.chip{display:inline-flex;align-items:center;padding:3px 10px;border-radius:9999px;background:rgba(255,90,31,.1);border:1px solid rgba(255,90,31,.2);font-size:12px;font-weight:600;color:#ffb59e;font-family:'Plus Jakarta Sans',sans-serif;}
+.chip .ms{font-family:'Material Symbols Outlined';font-size:12px;margin-right:3px;}
+.conf-bar{height:6px;border-radius:9999px;background:rgba(255,255,255,.06);overflow:hidden;}
+.conf-fill{height:100%;border-radius:9999px;background:linear-gradient(90deg,#ff5a1f,#ffb59e);width:0%;transition:width 1.2s cubic-bezier(.16,1,.3,1);}
+.cb-wrap{position:relative;width:20px;height:20px;flex-shrink:0;margin-top:2px;}
+.cb-wrap input{position:absolute;opacity:0;width:100%;height:100%;cursor:pointer;margin:0;z-index:1;}
+.cb-box{width:20px;height:20px;border-radius:4px;border:1px solid rgba(255,255,255,.2);background:#333539;display:flex;align-items:center;justify-content:center;transition:all .2s ease;}
+.cb-wrap input:checked ~ .cb-box{background:#ff5a1f;border-color:#ff5a1f;}
+.cb-check{display:none;font-family:'Material Symbols Outlined';font-size:14px;color:#fff;}
+.cb-wrap input:checked ~ .cb-box .cb-check{display:block;}
+</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary-container":"#ff5a1f","inverse-on-surface":"#2f3035","error":"#ffb4ab","secondary-fixed-dim":"#c2c6d8","surface-container-highest":"#333539","surface":"#111317","background":"#111317","inverse-surface":"#e2e2e8","on-primary-container":"#541400","outline-variant":"#5b4038","primary-fixed-dim":"#ffb59e","on-background":"#e2e2e8","primary":"#ffb59e","inverse-primary":"#ae3200","on-surface":"#e2e2e8","on-secondary-fixed":"#161b28","tertiary":"#ffb598","surface-tint":"#ffb59e","on-secondary":"#2b303e","primary-fixed":"#ffdbd0","surface-bright":"#37393e","surface-container-high":"#282a2e","secondary-container":"#424655","on-primary":"#5e1700","on-surface-variant":"#e4beb3","surface-dim":"#111317","surface-container":"#1e2024","on-primary-fixed":"#3a0b00","surface-container-low":"#1a1c20","outline":"#ab897f","surface-container-lowest":"#0c0e12","on-secondary-container":"#b0b5c6","surface-variant":"#333539","secondary-fixed":"#dee2f4","on-error":"#690005","secondary":"#c2c6d8","error-container":"#93000a"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-2xl":"4rem","space-3xl":"6rem","margin-md":"3rem","margin":"1.5rem","space-xl":"2.5rem","gutter-sm":"1rem","margin-lg":"5rem","space-md":"1rem","gutter-lg":"2rem","gutter":"1.5rem","space-sm":"0.5rem","space-xs":"0.25rem","space-lg":"1.5rem"},"fontFamily":{"headline-xl":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"badge-micro":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"]},"fontSize":{"headline-xl":["48px",{"lineHeight":"56px","letterSpacing":"-0.025em","fontWeight":"700"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-md":["14px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"badge-micro":["11px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"700"}],"body-sm":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}]}}}};
+</script>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-surface">
+<div id="toast-container" role="status" aria-live="polite"></div>
+
+<div id="success-modal" role="dialog" aria-modal="true">
+  <div id="success-modal-card">
+    <div class="ring-icon"><span style="font-family:'Material Symbols Outlined';font-size:40px;color:#ff5a1f;">rocket_launch</span></div>
+    <h2 style="font-family:'Plus Jakarta Sans';font-size:24px;font-weight:800;color:#e2e2e8;margin-bottom:.5rem;">Your Requirement is Live!</h2>
+    <p style="font-family:'Plus Jakarta Sans';font-size:16px;color:#c2c6d8;margin-bottom:2rem;line-height:1.6;">Your event requirement is now published. Top professionals will send you proposals shortly.</p>
+    <div style="display:flex;flex-direction:column;gap:.75rem;align-items:center;">
+      <a href="index.html" style="display:inline-flex;align-items:center;gap:.5rem;background:#ff5a1f;color:#fff;font-family:'Plus Jakarta Sans';font-size:14px;font-weight:600;padding:.75rem 2rem;border-radius:9999px;box-shadow:0 8px 24px -4px rgba(255,90,31,.4);text-decoration:none;width:100%;justify-content:center;max-width:260px;"><span style="font-family:'Material Symbols Outlined';font-size:18px;">dashboard</span>View Dashboard</a>
+      <a href="step-1-event-basics.html" style="display:inline-flex;align-items:center;gap:.5rem;background:#282a2e;color:#e2e2e8;font-family:'Plus Jakarta Sans';font-size:14px;font-weight:600;padding:.75rem 2rem;border-radius:9999px;border:1px solid rgba(255,255,255,.08);text-decoration:none;width:100%;justify-content:center;max-width:260px;"><span style="font-family:'Material Symbols Outlined';font-size:18px;">add_circle</span>Post Another</a>
+    </div>
+    <p style="font-family:'Plus Jakarta Sans';font-size:12px;color:rgba(194,198,216,.5);margin-top:1.5rem;">Req ID: <span id="req-id" style="color:#ffb59e;font-family:monospace;">GPR-2026-<span id="req-num">XXXXX</span></span></p>
+  </div>
+</div>
+
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/70 backdrop-blur-xl border-b border-white/[0.08]">
+  <div class="h-20 max-w-[1280px] mx-auto px-margin md:px-margin-md lg:px-margin-lg flex items-center justify-between">
+    <div class="flex items-center gap-space-sm">
+      <img alt="GoPratle Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xjvc9315TLRwPfxhYRyN-phA82HhGheNGKEykP4RkY-D8g13qg3rr4PGS2yIHlPR4JhqKQlONMi3vz-z_dSCMZAc9giDq5WGZnySswFNIOQjmlrdVhtb-ZLa5wUYpio3CL5ICq127fiBmP_lPqMQ6h_tuCB832OycGyPlSaVEykYeT1LyO4FjE3uTYXQD9sG2xvlyqOschrPxxn8R_D0Rv9f3EQcLIy2Gi6WR1obB_9h8bPrQkHiMgfQ"/>
+      <a class="flex items-center gap-1 font-headline-md text-headline-md tracking-tight font-extrabold text-on-surface" href="index.html"><span>GoPratle</span><span class="h-2 w-2 rounded-full bg-primary-container inline-block translate-y-0.5"></span></a>
+    </div>
+    <nav class="hidden md:flex items-center gap-gutter">
+      <a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="index.html#how-it-works">How it works</a>
+      <a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="index.html#categories">For Planners</a>
+    </nav>
+    <div class="flex items-center gap-space-md">
+      <a class="hidden sm:inline-flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors px-space-sm py-space-xs" href="javascript:void(0)" id="hdr-signin">Sign In</a>
+      <a class="inline-flex items-center justify-center bg-primary-container hover:bg-[#ff723f] text-on-surface font-label-md text-label-md px-space-lg py-space-sm rounded-full shadow-[0_8px_24px_-4px_rgba(255,90,31,0.4)] transition-all transform hover:-translate-y-0.5" href="step-1-event-basics.html">Post a Requirement</a>
+      <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="w-full pt-20 bg-surface">
+<div class="flex flex-col w-full">
+<div class="relative w-full overflow-hidden">
+  <div class="pointer-events-none absolute -top-40 left-1/3 w-[600px] h-[600px] rounded-full bg-primary-container/10 blur-[150px]"></div>
+  <div class="pointer-events-none absolute top-80 -right-32 w-[400px] h-[400px] rounded-full bg-primary/5 blur-[120px]"></div>
+  <div class="max-w-[1280px] w-full mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-xl">
+
+    <div class="flex flex-col gap-space-lg mb-space-2xl">
+      <div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm border-b border-white/[0.06]">
+        <a class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary hover:text-on-surface transition-colors group" href="javascript:void(0)" id="back-to-step3">
+          <span class="material-symbols-outlined text-[18px] group-hover:-translate-x-0.5 transition-transform">arrow_back</span><span>Back to Step 3</span>
+        </a>
+        <div class="flex items-center gap-space-lg">
+          <div class="flex items-center gap-2 font-label-sm text-label-sm text-secondary">
+            <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span>Draft auto-saved</span>
+          </div>
+          <button class="font-label-md text-label-md text-secondary hover:text-on-surface transition-colors hover:underline" id="save-exit-btn" type="button">Save &amp; Exit</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter-sm md:gap-gutter">
+        <a href="step-1-event-basics.html" class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-low/70 backdrop-blur-md hover:bg-surface-container transition-colors">
+          <div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 text-primary"><span class="material-symbols-outlined text-[18px]">check</span></div>
+          <div class="flex flex-col min-w-0"><span class="font-badge-micro text-badge-micro uppercase tracking-wider text-secondary">Step 1</span><span class="font-label-md text-label-md text-on-surface truncate">Basics</span></div>
+        </a>
+        <a href="javascript:void(0)" id="step2-back-link" class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-low/70 backdrop-blur-md hover:bg-surface-container transition-colors">
+          <div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 text-primary"><span class="material-symbols-outlined text-[18px]">check</span></div>
+          <div class="flex flex-col min-w-0"><span class="font-badge-micro text-badge-micro uppercase tracking-wider text-secondary">Step 2</span><span class="font-label-md text-label-md text-on-surface truncate">Details</span></div>
+        </a>
+        <a href="javascript:void(0)" id="step3-back-link" class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-low/70 backdrop-blur-md hover:bg-surface-container transition-colors">
+          <div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 text-primary"><span class="material-symbols-outlined text-[18px]">check</span></div>
+          <div class="flex flex-col min-w-0"><span class="font-badge-micro text-badge-micro uppercase tracking-wider text-secondary">Step 3</span><span class="font-label-md text-label-md text-on-surface truncate">Preferences</span></div>
+        </a>
+        <div class="relative flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-high border border-primary-container/40 shadow-[0_4px_24px_-4px_rgba(255,90,31,0.25)]">
+          <div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center shrink-0 text-on-surface shadow-[0_0_12px_rgba(255,90,31,0.6)]"><span class="font-label-sm text-label-sm font-bold">4</span></div>
+          <div class="flex flex-col min-w-0">
+            <div class="flex items-center gap-1.5"><span class="font-badge-micro text-badge-micro uppercase tracking-wider text-primary font-bold">Step 4</span><span class="px-1.5 py-0.5 rounded-full bg-primary-container/20 text-primary font-badge-micro text-[9px] uppercase tracking-wider font-extrabold">Active</span></div>
+            <span class="font-label-md text-label-md text-on-surface font-semibold truncate">Review &amp; Post</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-space-xs mt-space-sm">
+        <div class="inline-flex items-center gap-2 self-start px-space-sm py-1 rounded-full bg-primary-container/15 text-primary-container font-label-sm text-label-sm uppercase tracking-widest font-bold">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>STEP 4 OF 4 &bull; FINAL REVIEW
+        </div>
+        <h1 class="font-headline-xl text-headline-xl font-extrabold text-on-surface tracking-tight">Review &amp; Publish</h1>
+        <p class="font-body-md text-body-md text-secondary max-w-3xl">Confirm all details before broadcasting your requirement to GoPratle's verified professionals. You can edit any section before publishing.</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-start">
+      <div class="lg:col-span-7 flex flex-col gap-space-xl">
+
+        <div class="flex flex-col gap-space-md p-space-lg md:p-space-xl rounded-2xl bg-surface-container-low/90 backdrop-blur-xl shadow-xl border border-white/[0.04]">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[22px]">verified</span><span class="font-headline-sm text-headline-sm font-bold text-on-surface">Profile Completeness</span></div>
+            <span class="px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-400 font-label-sm text-label-sm font-bold border border-emerald-500/25">Excellent</span>
+          </div>
+          <div class="flex flex-col gap-space-sm">
+            <div class="flex items-center justify-between">
+              <span class="font-label-sm text-label-sm text-secondary">Requirement strength</span>
+              <span class="font-label-md text-label-md font-bold text-on-surface">92%</span>
+            </div>
+            <div class="conf-bar"><div class="conf-fill" id="confidence-fill"></div></div>
+            <div class="flex flex-wrap gap-2 mt-1">
+              <span class="chip"><span class="ms">check_circle</span>Event basics</span>
+              <span class="chip"><span class="ms">check_circle</span>Pro details</span>
+              <span class="chip"><span class="ms">check_circle</span>Budget set</span>
+              <span class="chip"><span class="ms">check_circle</span>Preferences saved</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-0 p-space-lg md:p-space-xl rounded-2xl bg-surface-container-low/90 backdrop-blur-xl shadow-xl border border-white/[0.04]">
+          <div class="flex items-center justify-between mb-space-md">
+            <div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-primary-container/15 flex items-center justify-center"><span class="material-symbols-outlined text-primary-container text-[18px]">event</span></div><span class="font-headline-sm text-headline-sm font-bold text-on-surface">Event Basics</span></div>
+            <a href="step-1-event-basics.html" class="edit-btn"><span class="material-symbols-outlined text-[13px]">edit</span>Edit</a>
+          </div>
+          <div class="review-row"><span class="review-label">Event Type</span><span class="review-value">Corporate Gala / Awards Night</span></div>
+          <div class="review-row"><span class="review-label">Event Name</span><span class="review-value font-semibold">Annual Sales Summit 2026</span></div>
+          <div class="review-row"><span class="review-label">Date &amp; Time</span><span class="review-value">15 Dec 2026 &middot; 7:00 PM</span></div>
+          <div class="review-row"><span class="review-label">Venue</span><span class="review-value">The Leela Palace, Bengaluru</span></div>
+          <div class="review-row"><span class="review-label">Guest Count</span><span class="review-value">200 &ndash; 350 pax</span></div>
+          <div class="review-row"><span class="review-label">Pro Type</span><span class="review-value hl" id="rv-pro-type">Performer &middot; DJ / Live Band</span></div>
+        </div>
+
+        <div class="flex flex-col gap-0 p-space-lg md:p-space-xl rounded-2xl bg-surface-container-low/90 backdrop-blur-xl shadow-xl border border-white/[0.04]">
+          <div class="flex items-center justify-between mb-space-md">
+            <div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-primary-container/15 flex items-center justify-center"><span class="material-symbols-outlined text-primary-container text-[18px]">mic_external_on</span></div><span class="font-headline-sm text-headline-sm font-bold text-on-surface" id="step2-card-title">Performer Details</span></div>
+            <a href="javascript:void(0)" class="edit-btn" id="edit-step2"><span class="material-symbols-outlined text-[13px]">edit</span>Edit</a>
+          </div>
+          <div class="review-row"><span class="review-label">Genre / Style</span><span class="review-value">Bollywood Retro &middot; Commercial EDM</span></div>
+          <div class="review-row"><span class="review-label">Duration</span><span class="review-value">2.5 &ndash; 3 hrs &middot; 1 Set</span></div>
+          <div class="review-row"><span class="review-label">Equipment</span><span class="review-value">DJ Decks &middot; Mixer &middot; Subwoofer</span></div>
+          <div class="review-row"><span class="review-label">Setup Time</span><span class="review-value">2 hrs before event</span></div>
+          <div class="review-row"><span class="review-label">Special Needs</span><span class="review-value">Smoke machine &middot; Laser lighting</span></div>
+        </div>
+
+        <div class="flex flex-col gap-0 p-space-lg md:p-space-xl rounded-2xl bg-surface-container-low/90 backdrop-blur-xl shadow-xl border border-white/[0.04]">
+          <div class="flex items-center justify-between mb-space-md">
+            <div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-primary-container/15 flex items-center justify-center"><span class="material-symbols-outlined text-primary-container text-[18px]">payments</span></div><span class="font-headline-sm text-headline-sm font-bold text-on-surface">Preferences &amp; Budget</span></div>
+            <a href="javascript:void(0)" class="edit-btn" id="edit-step3"><span class="material-symbols-outlined text-[13px]">edit</span>Edit</a>
+          </div>
+          <div class="review-row"><span class="review-label">Budget Range</span><span class="review-value hl" style="font-size:18px;">&#8377;60,000 &ndash; &#8377;1,50,000</span></div>
+          <div class="review-row"><span class="review-label">Sound &amp; Lights</span><span class="review-value">Provided by Host &#10003;</span></div>
+          <div class="review-row"><span class="review-label">Venue Type</span><span class="review-value">Indoor &middot; Ballroom</span></div>
+          <div class="review-row"><span class="review-label">Languages</span><span class="review-value">Hindi &middot; English</span></div>
+          <div class="review-row"><span class="review-label">Payment Terms</span><span class="review-value">50% advance &middot; 50% on day</span></div>
+        </div>
+
+        <div class="flex flex-col gap-space-md p-space-lg md:p-space-xl rounded-2xl bg-surface-container-low/90 backdrop-blur-xl shadow-xl border border-white/[0.04]">
+          <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[22px]">gavel</span><span class="font-headline-sm text-headline-sm font-bold text-on-surface">Terms &amp; Confirmation</span></div>
+          <div class="flex flex-col gap-space-md">
+            <label class="flex items-start gap-space-md cursor-pointer" for="terms-check">
+              <div class="cb-wrap"><input id="terms-check" type="checkbox"/><div class="cb-box"><span class="cb-check">check</span></div></div>
+              <p class="font-body-sm text-body-sm text-secondary leading-relaxed">I confirm all information is accurate and agree to GoPratle's <a href="#" class="text-primary underline">Terms of Service</a> and <a href="#" class="text-primary underline">Marketplace Guidelines</a>. Publishing makes this visible to verified professionals on the platform.</p>
+            </label>
+            <label class="flex items-start gap-space-md cursor-pointer" for="notify-check">
+              <div class="cb-wrap"><input id="notify-check" type="checkbox" checked/><div class="cb-box"><span class="cb-check">check</span></div></div>
+              <p class="font-body-sm text-body-sm text-secondary leading-relaxed">Notify me via email and SMS when I receive new proposals for this requirement.</p>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="lg:col-span-5 flex flex-col gap-space-lg lg:sticky lg:top-28">
+        <div class="flex flex-col gap-space-lg p-space-lg md:p-space-xl rounded-2xl bg-surface-container-low/90 backdrop-blur-xl shadow-2xl border border-primary-container/20" style="box-shadow:0 8px 40px -8px rgba(255,90,31,0.18);">
+          <div class="flex flex-col gap-space-xs">
+            <div class="inline-flex items-center gap-2 self-start px-space-sm py-1 rounded-full bg-primary-container/15 text-primary font-label-sm text-label-sm">
+              <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>Ready to Publish
+            </div>
+            <h2 class="font-headline-md text-headline-md font-extrabold text-on-surface tracking-tight">Broadcast Your Requirement</h2>
+            <p class="font-body-sm text-body-sm text-secondary leading-relaxed">Publishing will notify <strong class="text-on-surface">2,400+ verified professionals</strong> in your category. Expect your first proposals within 2&ndash;4 hours.</p>
+          </div>
+          <div class="grid grid-cols-3 gap-space-sm">
+            <div class="flex flex-col items-center p-space-sm rounded-xl bg-surface-container-high/60 text-center">
+              <span class="font-headline-sm text-headline-sm font-extrabold text-primary">2.4k</span>
+              <span class="font-label-sm text-label-sm text-secondary mt-0.5">Pros</span>
+            </div>
+            <div class="flex flex-col items-center p-space-sm rounded-xl bg-surface-container-high/60 text-center">
+              <span class="font-headline-sm text-headline-sm font-extrabold text-primary">~3h</span>
+              <span class="font-label-sm text-label-sm text-secondary mt-0.5">First Prop.</span>
+            </div>
+            <div class="flex flex-col items-center p-space-sm rounded-xl bg-surface-container-high/60 text-center">
+              <span class="font-headline-sm text-headline-sm font-extrabold text-primary">Free</span>
+              <span class="font-label-sm text-label-sm text-secondary mt-0.5">To Post</span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-space-xs p-space-md rounded-xl bg-surface-container-high/60 border-l-2 border-primary-container">
+            <span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Budget Range</span>
+            <span class="font-headline-md text-headline-md font-extrabold text-primary tracking-tight">&#8377;60,000 &ndash; &#8377;1,50,000</span>
+            <span class="font-body-sm text-body-sm text-secondary">Per Performance &middot; INR</span>
+          </div>
+          <button id="publish-btn" type="button" class="w-full inline-flex items-center justify-center gap-2 bg-primary-container hover:bg-[#ff723f] text-on-surface font-headline-sm text-headline-sm font-bold py-space-md px-space-xl rounded-2xl shadow-[0_8px_32px_-4px_rgba(255,90,31,0.45)] transition-all transform hover:-translate-y-0.5 active:scale-[0.98]">
+            <span class="material-symbols-outlined text-[22px]" id="publish-icon">rocket_launch</span>
+            <span id="publish-label">Publish Requirement</span>
+          </button>
+          <p id="terms-warning" class="font-body-sm text-body-sm text-error text-center" style="display:none;">Please accept the Terms &amp; Confirmation to publish.</p>
+          <div class="flex flex-col gap-space-sm pt-space-sm border-t border-white/[0.06]">
+            <div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px] text-emerald-400 shrink-0">shield</span><p class="font-body-sm text-body-sm text-secondary">All professionals are background-verified &amp; rated</p></div>
+            <div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px] text-primary shrink-0">lock</span><p class="font-body-sm text-body-sm text-secondary">Your contact details stay private until you accept a proposal</p></div>
+            <div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px] text-primary shrink-0">support_agent</span><p class="font-body-sm text-body-sm text-secondary">Dedicated event concierge available 24/7</p></div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-space-md p-space-lg rounded-2xl bg-surface-container-low/90 backdrop-blur-xl border border-white/[0.04]">
+          <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[20px]">timeline</span><span class="font-headline-sm text-headline-sm font-semibold text-on-surface">What Happens Next?</span></div>
+          <div class="flex flex-col gap-0">
+            <div class="flex gap-space-md">
+              <div class="flex flex-col items-center"><div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-surface text-[14px]">send</span></div><div class="w-px bg-white/[0.06] mt-1 mb-1" style="flex:1;min-height:1.5rem;"></div></div>
+              <div class="flex flex-col gap-0.5 pb-space-md"><span class="font-label-md text-label-md font-semibold text-on-surface">Requirement Published</span><span class="font-body-sm text-body-sm text-secondary">Immediately visible to 2,400+ professionals</span></div>
+            </div>
+            <div class="flex gap-space-md">
+              <div class="flex flex-col items-center"><div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 text-secondary"><span class="material-symbols-outlined text-[14px]">notifications</span></div><div class="w-px bg-white/[0.06] mt-1 mb-1" style="flex:1;min-height:1.5rem;"></div></div>
+              <div class="flex flex-col gap-0.5 pb-space-md"><span class="font-label-md text-label-md font-semibold text-on-surface">Proposals Start Arriving</span><span class="font-body-sm text-body-sm text-secondary">Within 2&ndash;4 hrs &middot; Email &amp; SMS alerts sent</span></div>
+            </div>
+            <div class="flex gap-space-md">
+              <div class="flex flex-col items-center"><div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 text-secondary"><span class="material-symbols-outlined text-[14px]">handshake</span></div><div class="w-px bg-white/[0.06] mt-1 mb-1" style="flex:1;min-height:1.5rem;"></div></div>
+              <div class="flex flex-col gap-0.5 pb-space-md"><span class="font-label-md text-label-md font-semibold text-on-surface">Review &amp; Shortlist</span><span class="font-body-sm text-body-sm text-secondary">Compare quotes, portfolios &amp; ratings</span></div>
+            </div>
+            <div class="flex gap-space-md">
+              <div class="flex flex-col items-center"><div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 text-secondary"><span class="material-symbols-outlined text-[14px]">celebration</span></div></div>
+              <div class="flex flex-col gap-0.5"><span class="font-label-md text-label-md font-semibold text-on-surface">Book &amp; Confirm</span><span class="font-body-sm text-body-sm text-secondary">Secure with GoPratle's escrow payment</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="h-16"></div>
+  </div>
+</div>
+</div>
+</main>
+
+<footer class="bg-surface-container-low border-t border-white/[0.06] py-space-xl">
+  <div class="max-w-[1280px] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-space-md">
+      <div class="flex items-center gap-space-sm">
+        <a class="flex items-center gap-1 font-headline-sm text-headline-sm tracking-tight font-extrabold text-on-surface" href="index.html"><span>GoPratle</span><span class="h-2 w-2 rounded-full bg-primary-container inline-block translate-y-0.5"></span></a>
+        <span class="font-body-sm text-body-sm text-secondary">&middot; India's Event Marketplace</span>
+      </div>
+      <p class="font-body-sm text-body-sm text-secondary/60">&copy; 2026 GoPratle Technologies Pvt. Ltd.</p>
+      <div class="flex items-center gap-space-lg">
+        <a class="font-label-sm text-label-sm text-secondary hover:text-on-surface transition-colors" href="#">Privacy</a>
+        <a class="font-label-sm text-label-sm text-secondary hover:text-on-surface transition-colors" href="#">Terms</a>
+        <a class="font-label-sm text-label-sm text-secondary hover:text-on-surface transition-colors" href="#">Support</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function showToast(msg,type){var icons={success:'check_circle',error:'error',info:'info'};var c=document.getElementById('toast-container');var t=document.createElement('div');t.className='toast '+(type||'info');t.innerHTML='<span class="toast-icon">'+(icons[type]||'info')+'</span><span>'+msg+'</span>';c.appendChild(t);setTimeout(function(){t.classList.add('fade-out');setTimeout(function(){t.remove();},300);},3800);}
+setTimeout(function(){var f=document.getElementById('confidence-fill');if(f)f.style.width='92%';},400);
+var step3Page=sessionStorage.getItem('gopratle_step3_page')||'step-3-performer-preferences.html';
+var step2Page=sessionStorage.getItem('gopratle_step2_page')||'step-2-performer-details.html';
+document.getElementById('back-to-step3').addEventListener('click',function(){window.location.href=step3Page;});
+document.getElementById('step3-back-link').addEventListener('click',function(){window.location.href=step3Page;});
+document.getElementById('step2-back-link').addEventListener('click',function(){window.location.href=step2Page;});
+document.getElementById('edit-step2').addEventListener('click',function(){window.location.href=step2Page;});
+document.getElementById('edit-step3').addEventListener('click',function(){window.location.href=step3Page;});
+document.getElementById('save-exit-btn').addEventListener('click',function(){showToast('Progress saved! Returning to dashboard...','success');setTimeout(function(){window.location.href='index.html';},700);});
+document.getElementById('hdr-signin').addEventListener('click',function(){showToast('Sign-in coming soon! Please continue as guest.','info');});
+document.getElementById('publish-btn').addEventListener('click',function(){
+  var accepted=document.getElementById('terms-check').checked;
+  var warning=document.getElementById('terms-warning');
+  if(!accepted){warning.style.display='block';showToast('Please accept the Terms & Confirmation to publish.','error');document.getElementById('terms-check').closest('label').scrollIntoView({behavior:'smooth',block:'center'});return;}
+  warning.style.display='none';
+  var btn=document.getElementById('publish-btn');var icon=document.getElementById('publish-icon');var label=document.getElementById('publish-label');
+  btn.disabled=true;btn.style.opacity='0.75';btn.style.cursor='not-allowed';icon.textContent='hourglass_top';label.textContent='Publishing...';
+  setTimeout(function(){
+    var num=Math.floor(10000+Math.random()*90000);document.getElementById('req-num').textContent=num;
+    var modal=document.getElementById('success-modal');modal.classList.add('active');
+    showToast('Your requirement is now live!','success');
+  },1800);
+});
+</script>
+</body>
+</html>

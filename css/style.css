@@ -1,0 +1,139 @@
+﻿/* Nocturne Pulse Design System Styles */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+:root {
+  --color-surface: #111317;
+  --color-surface-lowest: #0c0e12;
+  --color-surface-low: #1a1c20;
+  --color-surface-container: #1e2024;
+  --color-surface-high: #282a2e;
+  --color-surface-highest: #333539;
+  --color-primary: #ffb59e;
+  --color-primary-container: #ff5a1f;
+  --color-on-primary-container: #541400;
+  --color-on-surface: #e2e2e8;
+  --color-secondary: #c2c6d8;
+  --color-outline: #ab897f;
+  --color-outline-variant: #5b4038;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  min-height: 100vh;
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #111317;
+}
+::-webkit-scrollbar-thumb {
+  background: #282a2e;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5a1f;
+}
+
+/* Glassmorphic elevation */
+.glass-panel {
+  background: rgba(26, 31, 44, 0.65);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel:hover {
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+/* Ambient glow utilities */
+.glow-primary {
+  box-shadow: 0 12px 32px -8px rgba(255, 90, 31, 0.35);
+}
+
+.glow-primary-hover:hover {
+  box-shadow: 0 16px 40px -8px rgba(255, 90, 31, 0.5);
+}
+
+/* Interactive Card states */
+.interactive-card {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.interactive-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Custom Dual Range / Slider styles */
+input[type=range] {
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 4px solid #ff5a1f;
+  box-shadow: 0 0 12px rgba(255, 90, 31, 0.6);
+  cursor: grab;
+  margin-top: -8px;
+}
+input[type=range]::-moz-range-thumb {
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 4px solid #ff5a1f;
+  box-shadow: 0 0 12px rgba(255, 90, 31, 0.6);
+  cursor: grab;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  background: #282a2e;
+  border-radius: 9999px;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 6px;
+  background: #282a2e;
+  border-radius: 9999px;
+}
+
+/* Toast container */
+#toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+.toast-msg {
+  pointer-events: auto;
+  animation: slideInUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes slideInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
