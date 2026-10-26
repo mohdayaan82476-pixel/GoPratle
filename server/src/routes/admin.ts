@@ -71,7 +71,8 @@ router.patch(
   requireAdminAuth,
   async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
-      const { id } = req.params
+      const idParam = req.params.id
+      const id = Array.isArray(idParam) ? idParam[0] : String(idParam || '')
       const { status } = req.body
 
       if (!['open', 'matched', 'closed'].includes(status)) {
