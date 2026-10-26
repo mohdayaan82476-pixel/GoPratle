@@ -154,6 +154,15 @@ export default function Footer() {
                   Privacy Policy
                 </Link>
               </li>
+              <li className="pt-2 border-t border-white/10">
+                <Link
+                  href="/admin"
+                  className="inline-flex items-center gap-1.5 text-xs text-brand-soft hover:text-white transition-colors font-semibold"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                  Admin &amp; Founder Portal
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

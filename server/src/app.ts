@@ -4,6 +4,7 @@ import helmet from 'helmet'
 import { env } from './config/env'
 import requirementsRouter from './routes/requirements'
 import verificationRouter from './routes/verification'
+import adminRouter from './routes/admin'
 import {
   generalLimiter,
   notFound,
@@ -35,7 +36,7 @@ export function createApp(): Express {
     },
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'x-admin-key'],
     optionsSuccessStatus: 200,
   })
   app.use(corsMiddleware)
@@ -56,6 +57,7 @@ export function createApp(): Express {
   // Mount API routes
   app.use('/api/verification', verificationRouter)
   app.use('/api/requirements', requirementsRouter)
+  app.use('/api/admin', adminRouter)
 
   // 404 Handler
   app.use(notFound)

@@ -925,7 +925,67 @@ export default function HomePage() {
           )}
         </section>
 
-        {/* ── 6. DUAL CTA BANNER ── */}
+        {/* ── 6. FREQUENTLY ASKED QUESTIONS (HELP) ── */}
+        <section
+          id="help"
+          aria-label="Frequently Asked Questions"
+          className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 border-t border-border/60"
+        >
+          <Reveal delay={0}>
+            <div className="text-center mb-12">
+              <span className="text-xs font-semibold uppercase tracking-wider text-brand bg-band-soft px-3.5 py-1 rounded-full mb-3 inline-block">
+                Help &amp; FAQ
+              </span>
+              <h2 className="text-[28px] sm:text-[34px] font-display font-bold text-ink tracking-tight mb-2">
+                Frequently asked questions
+              </h2>
+              <p className="text-[15px] text-muted">
+                Everything you need to know about posting requirements and booking talent on GoPratle.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="space-y-4">
+            {[
+              {
+                q: 'How does GoPratle match talent with my event?',
+                a: 'Once you post your event requirement, our system classifies your specific category (Planner, Performer, or Crew) and notifies verified professionals in your city whose skills, availability, and rate card match your budget.',
+              },
+              {
+                q: 'Is posting an event requirement free for hosts?',
+                a: 'Yes, posting requirements on GoPratle is 100% free with no hidden charges. You receive direct bids and portfolio introductions from interested professionals without any upfront commitment.',
+              },
+              {
+                q: 'How are professionals and talent verified?',
+                a: 'All planners, artists, and technical crew undergo portfolio review, experience background checks, and client reference verification before they are marked as verified on our platform.',
+              },
+              {
+                q: 'Why do I need to verify my email address with an OTP?',
+                a: 'Email verification ensures that every listing on our marketplace is genuine and protects event professionals from spam inquiries. Your contact information is never shown publicly.',
+              },
+              {
+                q: 'How soon will I start receiving responses for my requirement?',
+                a: 'Most organizers start receiving inquiries and quotes within 2 to 4 hours of publishing their requirement.',
+              },
+            ].map((faq, idx) => (
+              <Reveal key={faq.q} delay={idx * 50}>
+                <details className="group bg-surface border border-border rounded-2xl p-5 shadow-xs transition-colors hover:border-brand/40 [&_summary::-webkit-details-marker]:hidden">
+                  <summary className="flex items-center justify-between font-display font-bold text-ink cursor-pointer text-base">
+                    <span>{faq.q}</span>
+                    <span className="ml-4 shrink-0 text-brand text-xl group-open:rotate-45 transition-transform duration-200">
+                      +
+                    </span>
+                  </summary>
+                  <p className="mt-3 text-sm text-muted leading-relaxed border-t border-border/50 pt-3">
+                    {faq.a}
+                  </p>
+                </details>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+
+        {/* ── 7. DUAL CTA BANNER ── */}
         <section
           aria-label="Get started or join as talent"
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16"

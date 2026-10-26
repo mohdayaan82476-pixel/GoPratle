@@ -34,27 +34,18 @@ async function createValidToken(email: string): Promise<string> {
 beforeAll(async () => {
   process.env.NODE_ENV = 'test'
 
-  // If a MongoDB instance URI is provided in environment, isolate into test database
-  if (process.env.MONGODB_URI && process.env.MONGODB_URI.startsWith('mongodb')) {
-    const isolatedUri = process.env.MONGODB_URI.replace(
-      /\/([a-zA-Z0-9_-]+)(\?|$)/,
-      '/gopratle_test_isolated$2'
-    )
-    process.env.MONGODB_URI = isolatedUri
-  } else {
-    try {
-      mongod = await MongoMemoryServer.create({
-        instance: { dbName: 'gopratle_test_mem' },
-      })
-      process.env.MONGODB_URI = mongod.getUri()
-    } catch {
-      process.env.MONGODB_URI = 'mongodb://127.0.0.1:27017/gopratle_test_isolated'
-    }
+  try {
+    mongod = await MongoMemoryServer.create({
+      instance: { dbName: 'gopratle_test_mem' },
+    })
+    process.env.MONGODB_URI = mongod.getUri()
+  } catch {
+    process.env.MONGODB_URI = 'mongodb://127.0.0.1:27017/gopratle_test_isolated'
   }
 
   await mongoose.connect(process.env.MONGODB_URI)
   app = createApp()
-}, 30000)
+}, 60000)
 
 afterAll(async () => {
   try {

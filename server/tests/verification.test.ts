@@ -3,6 +3,7 @@ import path from 'path'
 dotenv.config({ path: path.resolve(__dirname, '../.env') })
 
 import mongoose from 'mongoose'
+import { MongoMemoryServer } from 'mongodb-memory-server'
 import request from 'supertest'
 import { createApp } from '../src/app'
 import { Requirement } from '../src/models/Requirement'
@@ -19,21 +20,24 @@ jest.mock('../src/services/mailer', () => {
   }
 })
 
+let mongod: MongoMemoryServer | null = null
 let app: ReturnType<typeof createApp>
 
 beforeAll(async () => {
   process.env.NODE_ENV = 'test'
-  const mongoUri =
-    process.env.MONGODB_URI && process.env.MONGODB_URI.startsWith('mongodb')
-      ? process.env.MONGODB_URI.replace(
-          /\/([a-zA-Z0-9_-]+)(\?|$)/,
-          '/gopratle_test_isolated$2'
-        )
-      : 'mongodb://127.0.0.1:27017/gopratle_test_isolated'
 
-  await mongoose.connect(mongoUri)
+  try {
+    mongod = await MongoMemoryServer.create({
+      instance: { dbName: 'gopratle_test_mem_verif' },
+    })
+    process.env.MONGODB_URI = mongod.getUri()
+  } catch {
+    process.env.MONGODB_URI = 'mongodb://127.0.0.1:27017/gopratle_test_isolated'
+  }
+
+  await mongoose.connect(process.env.MONGODB_URI)
   app = createApp()
-}, 30000)
+}, 60000)
 
 afterAll(async () => {
   try {
@@ -42,6 +46,9 @@ afterAll(async () => {
     }
   } catch {}
   await mongoose.disconnect()
+  if (mongod) {
+    await mongod.stop()
+  }
 })
 
 beforeEach(async () => {

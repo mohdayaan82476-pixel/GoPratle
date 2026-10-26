@@ -1,5 +1,6 @@
 import { Router, Request, Response, NextFunction } from 'express'
 import crypto from 'crypto'
+import mongoose from 'mongoose'
 import {
   Requirement,
   generateReferenceId,
@@ -108,17 +109,21 @@ router.post(
       // 6. Asynchronously send confirmation email without awaiting in request path
       sendRequirementConfirmation(saved.toObject())
         .then(async () => {
-          await Requirement.updateOne(
-            { _id: saved._id },
-            { emailStatus: 'sent' }
-          )
+          if (mongoose.connection.readyState === 1) {
+            await Requirement.updateOne(
+              { _id: saved._id },
+              { emailStatus: 'sent' }
+            ).catch(() => {})
+          }
         })
         .catch(async (mailErr) => {
           console.error('[Requirements] Confirmation email failed:', mailErr)
-          await Requirement.updateOne(
-            { _id: saved._id },
-            { emailStatus: 'failed' }
-          )
+          if (mongoose.connection.readyState === 1) {
+            await Requirement.updateOne(
+              { _id: saved._id },
+              { emailStatus: 'failed' }
+            ).catch(() => {})
+          }
         })
     } catch (err) {
       next(err)

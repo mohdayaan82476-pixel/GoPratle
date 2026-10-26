@@ -323,3 +323,87 @@ export function maskEmail(email: string): string {
   return `${maskedUser}@${domain}`
 }
 
+/**
+ * Admin API: Fetch all requirements with unmasked contact info
+ */
+export async function getAdminRequirements(
+  adminKey: string,
+  params?: { category?: string; status?: string; search?: string }
+): Promise<{ requirements: any[]; totalCount: number }> {
+  const url = new URL(`${API_BASE}/api/admin/requirements`)
+  if (params?.category) url.searchParams.set('category', params.category)
+  if (params?.status) url.searchParams.set('status', params.status)
+  if (params?.search) url.searchParams.set('search', params.search)
+
+  const res = await fetch(url.toString(), {
+    method: 'GET',
+    headers: {
+      'x-admin-key': adminKey,
+      'Content-Type': 'application/json',
+    },
+  })
+
+  if (!res.ok) {
+    const body = await res.json().catch(() => ({}))
+    throw new ApiError(body.error || 'Failed to fetch admin requirements', res.status)
+  }
+
+  return res.json()
+}
+
+/**
+ * Admin API: Update requirement status (open, matched, closed)
+ */
+export async function updateAdminRequirementStatus(
+  id: string,
+  status: 'open' | 'matched' | 'closed',
+  adminKey: string
+): Promise<{ success: boolean; requirement: any }> {
+  const url = `${API_BASE}/api/admin/requirements/${encodeURIComponent(id)}/status`
+  const res = await fetch(url, {
+    method: 'PATCH',
+    headers: {
+      'x-admin-key': adminKey,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ status }),
+  })
+
+  if (!res.ok) {
+    const body = await res.json().catch(() => ({}))
+    throw new ApiError(body.error || 'Failed to update requirement status', res.status)
+  }
+
+  return res.json()
+}
+
+/**
+ * Admin API: Fetch admin overview statistics
+ */
+export async function getAdminStats(
+  adminKey: string
+): Promise<{
+  total: number
+  open: number
+  matched: number
+  closed: number
+  byCategory: { planner: number; performer: number; crew: number }
+}> {
+  const url = `${API_BASE}/api/admin/stats`
+  const res = await fetch(url, {
+    method: 'GET',
+    headers: {
+      'x-admin-key': adminKey,
+      'Content-Type': 'application/json',
+    },
+  })
+
+  if (!res.ok) {
+    const body = await res.json().catch(() => ({}))
+    throw new ApiError(body.error || 'Failed to fetch admin statistics', res.status)
+  }
+
+  return res.json()
+}
+
+

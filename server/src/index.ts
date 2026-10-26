@@ -1,7 +1,15 @@
+import dns from 'dns'
 import mongoose from 'mongoose'
 import { createApp } from './app'
 import { env } from './config/env'
 import verificationRouter from './routes/verification'
+
+// Fix Node.js Windows SRV resolution for MongoDB Atlas (+srv://)
+if (dns && typeof dns.setServers === 'function') {
+  try {
+    dns.setServers(['8.8.8.8', '8.8.4.4', '1.1.1.1'])
+  } catch {}
+}
 
 export { createApp, verificationRouter }
 
@@ -18,7 +26,7 @@ async function bootstrap() {
   try {
     console.log(`[GoPratle Server] Connecting to MongoDB at ${env.MONGODB_URI}...`)
     await mongoose.connect(env.MONGODB_URI, {
-      serverSelectionTimeoutMS: 2500,
+      serverSelectionTimeoutMS: 5000,
     })
     console.log('[GoPratle Server] Connected to MongoDB successfully.')
   } catch (err: any) {

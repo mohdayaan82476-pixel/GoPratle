@@ -41,6 +41,7 @@ const envSchema = z.object({
   SMTP_PASS: z.string().default(''),
   MAIL_FROM: z.string().default('"GoPratle" <no-reply@gopratle.com>'),
   OTP_SECRET: z.string().default('gopratle_dev_otp_secret_key_1234567890'),
+  ADMIN_SECRET: z.string().default('gopratle2026'),
 })
 
 export type EnvConfig = {
@@ -54,6 +55,7 @@ export type EnvConfig = {
   SMTP_PASS: string
   MAIL_FROM: string
   OTP_SECRET: string
+  ADMIN_SECRET: string
 }
 
 export function loadEnv(): EnvConfig {
